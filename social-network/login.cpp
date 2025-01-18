@@ -48,6 +48,9 @@ void login::on_loginB_clicked()
             ui->errorLogIn->show();
             break;
         case 3:
+            ui->errorServer->hide();
+            ui->errorLogIn->hide();
+            ui->passIncorrect->hide();
             mw.show();
             break;
         case 4:

@@ -26,4 +26,4 @@ public:
     std::string getgmail();
 };
 
-#endif // USERS_H
+#endif

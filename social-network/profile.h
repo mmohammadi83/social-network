@@ -19,4 +19,4 @@ private:
     Ui::profile *ui;
 };
 
-#endif // PROFILE_H
+#endif
