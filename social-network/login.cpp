@@ -2,6 +2,8 @@
 #include "ui_login.h"
 #include "database.h"
 #include "users.h"
+#include "profile.h" // Include the profile header
+
 login::login(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::login)
@@ -16,13 +18,10 @@ login::login(QWidget *parent) :
 login::~login()
 {
     delete ui;
-
 }
-
 
 void login::on_loginB_clicked()
 {
-
 
 }
 

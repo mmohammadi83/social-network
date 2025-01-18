@@ -21,6 +21,8 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     message.cpp \
+    profile.cpp \
+    showmessages.cpp \
     users.cpp
 
 HEADERS += \
@@ -28,11 +30,15 @@ HEADERS += \
     login.h \
     mainwindow.h \
     message.h \
+    profile.h \
+    showmessages.h \
     users.h
 
 FORMS += \
     login.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    profile.ui \
+    showmessages.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
