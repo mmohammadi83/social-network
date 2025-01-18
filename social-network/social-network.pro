@@ -20,7 +20,6 @@ SOURCES += \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
-    message.cpp \
     users.cpp
 
 HEADERS += \

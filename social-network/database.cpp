@@ -86,13 +86,16 @@ int DataBase::validationUser(std::string Uname, std::string pass)
 
     if(!query.exec()){
         qDebug() << "faild to execute";
+        db.close();
         return 1;
     }
     if(!query.next()){
         qDebug() << "user not exists";
+        db.close();
         return 2;
     }
     std::string password = query.value(0).toString().toStdString();
+    db.close();
     if(password == pass){
         qDebug() << "user is valid";
         return 3;
@@ -100,6 +103,7 @@ int DataBase::validationUser(std::string Uname, std::string pass)
         qDebug() << "user is not valid";
         return 4;
     }
+
 }
 
 
