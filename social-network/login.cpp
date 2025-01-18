@@ -2,6 +2,8 @@
 #include "ui_login.h"
 #include "database.h"
 #include "users.h"
+#include "mainwindow.h"
+
 login::login(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::login)
@@ -11,6 +13,9 @@ login::login(QWidget *parent) :
     ui->errorLogIn->hide();
     ui->errorconfirm->hide();
     ui->doneSignUp->hide();
+    ui->passIncorrect->hide();
+    ui->errorServer->hide();
+
 }
 
 login::~login()
@@ -22,7 +27,37 @@ login::~login()
 
 void login::on_loginB_clicked()
 {
-
+    std::string uname = ui->userName->text().toStdString();
+    std::string pass = ui->password->text().toStdString();
+    int validation = DataBase::validationUser(uname , pass);
+    MainWindow mw;
+    switch (validation) {
+        case 0:
+            ui->errorLogIn->hide();
+            ui->passIncorrect->hide();
+            ui->errorServer->show();
+            break;
+        case 1:
+            ui->errorLogIn->hide();
+            ui->passIncorrect->hide();
+            ui->errorServer->show();
+            break;
+        case 2:
+            ui->passIncorrect->hide();
+            ui->errorServer->hide();
+            ui->errorLogIn->show();
+            break;
+        case 3:
+            mw.show();
+            break;
+        case 4:
+            ui->errorServer->hide();
+            ui->errorLogIn->hide();
+            ui->passIncorrect->show();
+            break;
+        default:
+            break;
+    }
 
 }
 

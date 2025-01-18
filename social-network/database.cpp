@@ -70,6 +70,38 @@ bool DataBase::userExists(std::string Uname)
 
 }
 
+int DataBase::validationUser(std::string Uname, std::string pass)
+{
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("data.db");
+
+    if(!db.open()){
+        qDebug() << "faild to open database";
+        return 0;
+    }
+
+    QSqlQuery query;
+    query.prepare("SELECT password FROM user WHERE userName = :Uname;");
+    query.bindValue(":Uname" , QString::fromStdString(Uname));
+
+    if(!query.exec()){
+        qDebug() << "faild to execute";
+        return 1;
+    }
+    if(!query.next()){
+        qDebug() << "user not exists";
+        return 2;
+    }
+    std::string password = query.value(0).toString().toStdString();
+    if(password == pass){
+        qDebug() << "user is valid";
+        return 3;
+    }else{
+        qDebug() << "user is not valid";
+        return 4;
+    }
+}
+
 
 
 

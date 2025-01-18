@@ -45,6 +45,8 @@ public:
     QLabel *errorLogIn;
     QLabel *errorconfirm;
     QLabel *doneSignUp;
+    QLabel *errorServer;
+    QLabel *passIncorrect;
 
     void setupUi(QDialog *login)
     {
@@ -210,6 +212,18 @@ public:
         doneSignUp->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
 "font: 10pt \"Arial Narrow\";\n"
 "color: rgb(0, 255, 0)"));
+        errorServer = new QLabel(login);
+        errorServer->setObjectName(QString::fromUtf8("errorServer"));
+        errorServer->setGeometry(QRect(50, 470, 241, 31));
+        errorServer->setStyleSheet(QString::fromUtf8("background-color: rgb(0,0,0);\n"
+"font: 10pt \"Arial Narrow\";\n"
+"color: rgb(170, 0, 0)"));
+        passIncorrect = new QLabel(login);
+        passIncorrect->setObjectName(QString::fromUtf8("passIncorrect"));
+        passIncorrect->setGeometry(QRect(50, 480, 241, 31));
+        passIncorrect->setStyleSheet(QString::fromUtf8("background-color: rgb(0,0,0);\n"
+"font: 10pt \"Arial Narrow\";\n"
+"color: rgb(170, 0, 0)"));
 
         retranslateUi(login);
 
@@ -235,6 +249,8 @@ public:
         errorLogIn->setText(QCoreApplication::translate("login", "this user dosn't have account", nullptr));
         errorconfirm->setText(QCoreApplication::translate("login", "to password are not matching", nullptr));
         doneSignUp->setText(QCoreApplication::translate("login", "user added  to database", nullptr));
+        errorServer->setText(QCoreApplication::translate("login", "error from database. please try later", nullptr));
+        passIncorrect->setText(QCoreApplication::translate("login", "password incorrect", nullptr));
     } // retranslateUi
 
 };

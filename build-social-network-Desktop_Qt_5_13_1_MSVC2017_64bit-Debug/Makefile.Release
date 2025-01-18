@@ -552,7 +552,12 @@ release/login.o: ../social-network/login.cpp ../social-network/login.h \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/qtouchdevice.h \
 		ui_login.h \
 		../social-network/database.h \
-		../social-network/users.h
+		../social-network/users.h \
+		../social-network/mainwindow.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QMainWindow \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qmainwindow.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qtabwidget.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/qicon.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\login.o ..\social-network\login.cpp
 
 release/main.o: ../social-network/main.cpp ../social-network/mainwindow.h \

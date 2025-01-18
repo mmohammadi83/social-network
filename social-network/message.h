@@ -1,19 +1,22 @@
 #ifndef MESSAGE_H
 #define MESSAGE_H
 #include <unordered_map>
-#include <list>
+#include <stack>
 #include "users.h"
 #include <iostream>
 
 using namespace std;
 
 
-class message
+class Message
 {
 private:
-    unordered_map<users* , list<string>*> map;
+    users* sender;
+    unordered_map<users* , stack<string>*> messageList;
+
 public:
-    message();
+    Message(users*);
+    void sendMessage(users* , string);
 };
 
 #endif // MESSAGE_H
