@@ -1,13 +1,13 @@
 #include <QApplication>
 #include "login.h"
+#include <QDebug>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    // Show the login dialog
-    login loginDialog;
-    loginDialog.show();
+    login log;
+    log.show();
 
     return a.exec();
 }

@@ -8,12 +8,28 @@
 using namespace std;
 
 
-class message
+class Message
 {
 private:
-    unordered_map<users* , list<string>*> map;
+    
+    unordered_map<users* , list<string>*> messageList;
+
 public:
-    message();
+    
+void sendMessage(users *user, string message)
+{
+    if(!user) return;
+
+    if(messageList.count(user)){
+        messageList.at(user)->push_back(message);
+    }else{
+        list<string>* temp = new list<string>;
+        temp->push_back(message);
+        pair<users* , list<string>*> p(user , temp);
+        messageList.insert(p);
+    }
+}
+
 };
 
 #endif // MESSAGE_H
