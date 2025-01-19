@@ -27,8 +27,8 @@ login::~login()
 
 void login::on_loginB_clicked()
 {
-    std::string uname = ui->userName->text().toStdString();
-    std::string pass = ui->password->text().toStdString();
+    std::string uname = ui->unameLog->text().toStdString();
+    std::string pass = ui->passLog->text().toStdString();
     int validation = DataBase::validationUser(uname , pass);
     MainWindow mw;
     switch (validation) {
@@ -48,6 +48,9 @@ void login::on_loginB_clicked()
             ui->errorLogIn->show();
             break;
         case 3:
+            ui->passIncorrect->hide();
+            ui->errorServer->hide();
+            ui->errorLogIn->hide();
             mw.show();
             break;
         case 4:

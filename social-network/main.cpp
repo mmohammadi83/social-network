@@ -1,6 +1,5 @@
-#include "mainwindow.h"
-#include "login.h"
 #include <QApplication>
+#include "login.h"
 #include <QDebug>
 
 int main(int argc, char *argv[])
@@ -9,7 +8,6 @@ int main(int argc, char *argv[])
 
     login log;
     log.show();
-
 
     return a.exec();
 }

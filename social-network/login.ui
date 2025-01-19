@@ -31,9 +31,11 @@
   <property name="styleSheet">
    <string notr="true">
 background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.340909 rgba(0, 0, 0, 255), stop:0.511364 rgba(255, 255, 255, 255));
-border-radius: 5px;
+
 font: 10pt &quot;Mongolian Baiti&quot;;
 color:rgb(255,255,255);
+border-radius: 10px;
+
 
 
 </string>
@@ -79,10 +81,10 @@ color:rgb(0, 0, 0)
   <widget class="QLineEdit" name="name">
    <property name="geometry">
     <rect>
-     <x>650</x>
+     <x>640</x>
      <y>120</y>
-     <width>151</width>
-     <height>31</height>
+     <width>181</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -94,10 +96,10 @@ color: rgb(255, 255, 255);
   <widget class="QLineEdit" name="userName">
    <property name="geometry">
     <rect>
-     <x>470</x>
+     <x>440</x>
      <y>120</y>
-     <width>151</width>
-     <height>31</height>
+     <width>181</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -109,10 +111,10 @@ color: rgb(255, 255, 255);
   <widget class="QLineEdit" name="age">
    <property name="geometry">
     <rect>
-     <x>470</x>
+     <x>440</x>
      <y>220</y>
-     <width>151</width>
-     <height>31</height>
+     <width>181</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -142,10 +144,10 @@ font: 12pt &quot;Mongolian Baiti&quot;;
   <widget class="QLineEdit" name="gmail">
    <property name="geometry">
     <rect>
-     <x>650</x>
+     <x>640</x>
      <y>220</y>
-     <width>151</width>
-     <height>31</height>
+     <width>181</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -193,10 +195,10 @@ font: 12pt &quot;Mongolian Baiti&quot;;
   <widget class="QLineEdit" name="password">
    <property name="geometry">
     <rect>
-     <x>470</x>
+     <x>440</x>
      <y>320</y>
-     <width>151</width>
-     <height>31</height>
+     <width>181</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -226,10 +228,10 @@ font: 12pt &quot;Mongolian Baiti&quot;;
   <widget class="QLineEdit" name="confirmPass">
    <property name="geometry">
     <rect>
-     <x>650</x>
+     <x>640</x>
      <y>320</y>
-     <width>151</width>
-     <height>31</height>
+     <width>181</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -259,8 +261,8 @@ color:rgb(0, 0, 0)</string>
   <widget class="QPushButton" name="signupB">
    <property name="geometry">
     <rect>
-     <x>590</x>
-     <y>380</y>
+     <x>580</x>
+     <y>430</y>
      <width>111</width>
      <height>41</height>
     </rect>
@@ -277,10 +279,10 @@ color:rgb(255, 255, 255);
   <widget class="QLineEdit" name="unameLog">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>30</x>
      <y>130</y>
-     <width>151</width>
-     <height>31</height>
+     <width>271</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -330,10 +332,10 @@ color: rgb(255,255,255);
   <widget class="QLineEdit" name="passLog">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>30</x>
      <y>230</y>
-     <width>151</width>
-     <height>31</height>
+     <width>271</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -345,8 +347,8 @@ color: rgb(0,0,0);
   <widget class="QPushButton" name="loginB">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>390</y>
+     <x>80</x>
+     <y>430</y>
      <width>111</width>
      <height>41</height>
     </rect>
@@ -382,7 +384,7 @@ color: rgb(255, 255, 255)</string>
    <property name="geometry">
     <rect>
      <x>520</x>
-     <y>450</y>
+     <y>500</y>
      <width>231</width>
      <height>31</height>
     </rect>
@@ -399,8 +401,8 @@ color: rgb(170, 0, 0)</string>
   <widget class="QLabel" name="errorLogIn">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>450</y>
+     <x>60</x>
+     <y>310</y>
      <width>241</width>
      <height>31</height>
     </rect>
@@ -418,7 +420,7 @@ color: rgb(170, 0, 0)</string>
    <property name="geometry">
     <rect>
      <x>650</x>
-     <y>350</y>
+     <y>370</y>
      <width>161</width>
      <height>21</height>
     </rect>
@@ -436,7 +438,7 @@ color: rgb(170, 0, 0)</string>
    <property name="geometry">
     <rect>
      <x>520</x>
-     <y>460</y>
+     <y>500</y>
      <width>231</width>
      <height>31</height>
     </rect>
@@ -453,8 +455,8 @@ color: rgb(0, 255, 0)</string>
   <widget class="QLabel" name="errorServer">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>470</y>
+     <x>60</x>
+     <y>330</y>
      <width>241</width>
      <height>31</height>
     </rect>
@@ -465,14 +467,14 @@ font: 10pt &quot;Arial Narrow&quot;;
 color: rgb(170, 0, 0)</string>
    </property>
    <property name="text">
-    <string>error from database. please try later</string>
+    <string>error from database</string>
    </property>
   </widget>
   <widget class="QLabel" name="passIncorrect">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>480</y>
+     <x>60</x>
+     <y>350</y>
      <width>241</width>
      <height>31</height>
     </rect>
