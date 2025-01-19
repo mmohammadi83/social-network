@@ -2,7 +2,9 @@
 #include "ui_login.h"
 #include "database.h"
 #include "users.h"
+#include "profile.h" 
 #include "mainwindow.h"
+
 
 login::login(QWidget *parent) :
     QDialog(parent),
@@ -21,9 +23,7 @@ login::login(QWidget *parent) :
 login::~login()
 {
     delete ui;
-
 }
-
 
 void login::on_loginB_clicked()
 {
@@ -48,9 +48,11 @@ void login::on_loginB_clicked()
             ui->errorLogIn->show();
             break;
         case 3:
+
             ui->passIncorrect->hide();
             ui->errorServer->hide();
             ui->errorLogIn->hide();
+
             mw.show();
             break;
         case 4:

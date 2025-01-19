@@ -18,6 +18,7 @@ public:
 private slots:
     void someFunction();
 
+
 private:
     Ui::MainWindow *ui;
 };
