@@ -110,6 +110,90 @@ int DataBase::validationUser(std::string Uname, std::string pass)
 
 }
 
+void DataBase::pushGraph(Graph *graph)
+{
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("data.db");
+
+    if(!db.open()){
+        qDebug() << "faild to open database";
+        return ;
+    }
+
+    QSqlQuery query;
+    query.prepare("SELECT * FROM user");
+
+    if(!query.exec()){
+        qDebug() << "faild to execute";
+        db.close();
+        return ;
+    }
+    while(query.next()){
+        std::string userName = query.value(1).toString().toStdString();
+        std::string password = query.value(2).toString().toStdString();
+        std::string name = query.value(3).toString().toStdString();
+        int age = query.value(4).toInt();
+        std::string gmail = query.value(5).toString().toStdString();
+
+        graph->addNode(userName , password , name , age , gmail);
+    }
+
+    query.prepare("SELECT * FROM followList");
+
+    if(!query.exec()){
+        qDebug() << "faild to execute";
+        db.close();
+        return ;
+    }
+
+    while(query.next()){
+        std::string from = query.value(0).toString().toStdString();
+        std::string to = query.value(1).toString().toStdString();
+        graph->addEdge(from , to);
+    }
+    db.close();
+}
+
+bool DataBase::setUserFromDB(users *user, string uname)
+{
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("data.db");
+
+    if(!db.open()){
+        qDebug() << "faild to open database";
+        return 0;
+    }
+
+    QSqlQuery query;
+    query.prepare("SELECT * FROM user WHERE userName = :uname ");
+    query.bindValue(":uname" , QString::fromStdString(uname).trimmed());
+
+
+    if(!query.exec()){
+        qDebug() << "faild to execute";
+        db.close();
+        return 0;
+    }
+
+    if(!query.next()){
+        qDebug() << "user not exists";
+        db.close();
+        return 0;
+    }
+
+    std::string userName = query.value(1).toString().toStdString();
+    std::string password = query.value(2).toString().toStdString();
+    std::string name = query.value(3).toString().toStdString();
+    int age = query.value(4).toInt();
+    std::string gmail = query.value(5).toString().toStdString();
+
+
+    user = new users(userName , password , name , age , gmail);
+
+    db.close();
+    return 1;
+}
+
 
 
 

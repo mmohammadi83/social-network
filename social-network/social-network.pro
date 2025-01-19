@@ -31,7 +31,8 @@ HEADERS += \
     message.h \
     profile.h \
     showmessages.h \
-    users.h
+    users.h \
+    graph.h
 
 FORMS += \
     login.ui \
