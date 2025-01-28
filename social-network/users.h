@@ -14,7 +14,7 @@ private:
 
 public:
 
-
+    users(){}
     users(std::string un , std::string n , std::string p , int ag , std::string gm);
 
     void setUName(std::string n);
@@ -27,6 +27,7 @@ public:
     int getage();
     void setgmail(std::string n);
     std::string getgmail();
+
 };
 
 #endif

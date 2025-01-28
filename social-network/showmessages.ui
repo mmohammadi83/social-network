@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1186</width>
-    <height>901</height>
+    <width>914</width>
+    <height>699</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,10 @@
    <widget class="QTextEdit" name="chatDisplay">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>80</x>
       <y>40</y>
-      <width>1101</width>
-      <height>701</height>
+      <width>731</width>
+      <height>531</height>
      </rect>
     </property>
     <property name="readOnly">
@@ -30,9 +30,9 @@
    <widget class="QLineEdit" name="messageInput">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>780</y>
-      <width>721</width>
+      <x>80</x>
+      <y>590</y>
+      <width>601</width>
       <height>31</height>
      </rect>
     </property>
@@ -43,8 +43,8 @@
    <widget class="QPushButton" name="sendButton">
     <property name="geometry">
      <rect>
-      <x>790</x>
-      <y>780</y>
+      <x>700</x>
+      <y>590</y>
       <width>112</width>
       <height>34</height>
      </rect>
@@ -59,8 +59,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1186</width>
-     <height>30</height>
+     <width>914</width>
+     <height>20</height>
     </rect>
    </property>
   </widget>

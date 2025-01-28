@@ -20,7 +20,6 @@ SOURCES += \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
-    profile.cpp \
     showmessages.cpp \
     users.cpp
 
@@ -29,7 +28,6 @@ HEADERS += \
     login.h \
     mainwindow.h \
     message.h \
-    profile.h \
     showmessages.h \
     users.h \
     graph.h
@@ -37,7 +35,6 @@ HEADERS += \
 FORMS += \
     login.ui \
     mainwindow.ui \
-    profile.ui \
     showmessages.ui
 
 # Default rules for deployment.

@@ -30,7 +30,7 @@ void login::on_loginB_clicked()
     std::string uname = ui->unameLog->text().toStdString();
     std::string pass = ui->passLog->text().toStdString();
     int validation = DataBase::validationUser(uname , pass);
-    MainWindow mw;
+    MainWindow mw(uname);
     switch (validation) {
         case 0:
             ui->errorLogIn->hide();

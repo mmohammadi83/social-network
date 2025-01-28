@@ -58,9 +58,11 @@ public:
         login->setMaximumSize(QSize(16777215, 16777215));
         login->setStyleSheet(QString::fromUtf8("\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.340909 rgba(0, 0, 0, 255), stop:0.511364 rgba(255, 255, 255, 255));\n"
-"border-radius: 5px;\n"
+"\n"
 "font: 10pt \"Mongolian Baiti\";\n"
 "color:rgb(255,255,255);\n"
+"border-radius: 10px;\n"
+"\n"
 "\n"
 "\n"
 ""));
@@ -80,19 +82,19 @@ public:
 ""));
         name = new QLineEdit(login);
         name->setObjectName(QString::fromUtf8("name"));
-        name->setGeometry(QRect(650, 120, 151, 31));
+        name->setGeometry(QRect(640, 120, 181, 41));
         name->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);\n"
 "color: rgb(255, 255, 255);\n"
 ""));
         userName = new QLineEdit(login);
         userName->setObjectName(QString::fromUtf8("userName"));
-        userName->setGeometry(QRect(470, 120, 151, 31));
+        userName->setGeometry(QRect(440, 120, 181, 41));
         userName->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);\n"
 "color: rgb(255, 255, 255);\n"
 ""));
         age = new QLineEdit(login);
         age->setObjectName(QString::fromUtf8("age"));
-        age->setGeometry(QRect(470, 220, 151, 31));
+        age->setGeometry(QRect(440, 220, 181, 41));
         age->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);\n"
 "color: rgb(255, 255, 255);\n"
 ""));
@@ -104,7 +106,7 @@ public:
 ""));
         gmail = new QLineEdit(login);
         gmail->setObjectName(QString::fromUtf8("gmail"));
-        gmail->setGeometry(QRect(650, 220, 151, 31));
+        gmail->setGeometry(QRect(640, 220, 181, 41));
         gmail->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);\n"
 "color: rgb(255, 255, 255);\n"
 ""));
@@ -122,7 +124,7 @@ public:
 ""));
         password = new QLineEdit(login);
         password->setObjectName(QString::fromUtf8("password"));
-        password->setGeometry(QRect(470, 320, 151, 31));
+        password->setGeometry(QRect(440, 320, 181, 41));
         password->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);\n"
 "color: rgb(255, 255, 255);\n"
 ""));
@@ -134,7 +136,7 @@ public:
 ""));
         confirmPass = new QLineEdit(login);
         confirmPass->setObjectName(QString::fromUtf8("confirmPass"));
-        confirmPass->setGeometry(QRect(650, 320, 151, 31));
+        confirmPass->setGeometry(QRect(640, 320, 181, 41));
         confirmPass->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);\n"
 "color: rgb(255, 255, 255);\n"
 ""));
@@ -146,13 +148,13 @@ public:
 "color:rgb(0, 0, 0)"));
         signupB = new QPushButton(login);
         signupB->setObjectName(QString::fromUtf8("signupB"));
-        signupB->setGeometry(QRect(590, 380, 111, 41));
+        signupB->setGeometry(QRect(580, 430, 111, 41));
         signupB->setStyleSheet(QString::fromUtf8("background-color: rgb(99, 99, 99);\n"
 "color:rgb(255, 255, 255);\n"
 ""));
         unameLog = new QLineEdit(login);
         unameLog->setObjectName(QString::fromUtf8("unameLog"));
-        unameLog->setGeometry(QRect(70, 130, 151, 31));
+        unameLog->setGeometry(QRect(30, 130, 271, 41));
         unameLog->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
 "color: rgb(0,0,0);\n"
 ""));
@@ -172,13 +174,13 @@ public:
 ""));
         passLog = new QLineEdit(login);
         passLog->setObjectName(QString::fromUtf8("passLog"));
-        passLog->setGeometry(QRect(70, 230, 151, 31));
+        passLog->setGeometry(QRect(30, 230, 271, 41));
         passLog->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
 "color: rgb(0,0,0);\n"
 ""));
         loginB = new QPushButton(login);
         loginB->setObjectName(QString::fromUtf8("loginB"));
-        loginB->setGeometry(QRect(90, 390, 111, 41));
+        loginB->setGeometry(QRect(80, 430, 111, 41));
         loginB->setStyleSheet(QString::fromUtf8("background-color: rgb(191, 191, 191);\n"
 "color:rgb(0, 0, 0)\n"
 ""));
@@ -190,37 +192,37 @@ public:
 "color: rgb(255, 255, 255)"));
         errorSignUp = new QLabel(login);
         errorSignUp->setObjectName(QString::fromUtf8("errorSignUp"));
-        errorSignUp->setGeometry(QRect(520, 450, 231, 31));
+        errorSignUp->setGeometry(QRect(520, 500, 231, 31));
         errorSignUp->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
 "font: 10pt \"Arial Narrow\";\n"
 "color: rgb(170, 0, 0)"));
         errorLogIn = new QLabel(login);
         errorLogIn->setObjectName(QString::fromUtf8("errorLogIn"));
-        errorLogIn->setGeometry(QRect(50, 450, 241, 31));
+        errorLogIn->setGeometry(QRect(60, 310, 241, 31));
         errorLogIn->setStyleSheet(QString::fromUtf8("background-color: rgb(0,0,0);\n"
 "font: 10pt \"Arial Narrow\";\n"
 "color: rgb(170, 0, 0)"));
         errorconfirm = new QLabel(login);
         errorconfirm->setObjectName(QString::fromUtf8("errorconfirm"));
-        errorconfirm->setGeometry(QRect(650, 350, 161, 21));
+        errorconfirm->setGeometry(QRect(650, 370, 161, 21));
         errorconfirm->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
 "font: 10pt \"Arial Narrow\";\n"
 "color: rgb(170, 0, 0)"));
         doneSignUp = new QLabel(login);
         doneSignUp->setObjectName(QString::fromUtf8("doneSignUp"));
-        doneSignUp->setGeometry(QRect(520, 460, 231, 31));
+        doneSignUp->setGeometry(QRect(520, 500, 231, 31));
         doneSignUp->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
 "font: 10pt \"Arial Narrow\";\n"
 "color: rgb(0, 255, 0)"));
         errorServer = new QLabel(login);
         errorServer->setObjectName(QString::fromUtf8("errorServer"));
-        errorServer->setGeometry(QRect(50, 470, 241, 31));
+        errorServer->setGeometry(QRect(60, 330, 241, 31));
         errorServer->setStyleSheet(QString::fromUtf8("background-color: rgb(0,0,0);\n"
 "font: 10pt \"Arial Narrow\";\n"
 "color: rgb(170, 0, 0)"));
         passIncorrect = new QLabel(login);
         passIncorrect->setObjectName(QString::fromUtf8("passIncorrect"));
-        passIncorrect->setGeometry(QRect(50, 480, 241, 31));
+        passIncorrect->setGeometry(QRect(60, 350, 241, 31));
         passIncorrect->setStyleSheet(QString::fromUtf8("background-color: rgb(0,0,0);\n"
 "font: 10pt \"Arial Narrow\";\n"
 "color: rgb(170, 0, 0)"));
@@ -249,7 +251,7 @@ public:
         errorLogIn->setText(QCoreApplication::translate("login", "this user dosn't have account", nullptr));
         errorconfirm->setText(QCoreApplication::translate("login", "to password are not matching", nullptr));
         doneSignUp->setText(QCoreApplication::translate("login", "user added  to database", nullptr));
-        errorServer->setText(QCoreApplication::translate("login", "error from database. please try later", nullptr));
+        errorServer->setText(QCoreApplication::translate("login", "error from database", nullptr));
         passIncorrect->setText(QCoreApplication::translate("login", "password incorrect", nullptr));
     } // retranslateUi
 

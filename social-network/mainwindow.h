@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "graph.h"
+#include "database.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,12 +19,13 @@ public:
     MainWindow(std::string uname ,QWidget *parent = nullptr);
     ~MainWindow();
 
-private slots:
-    void someFunction();
 
 
 private:
     Ui::MainWindow *ui;
+    int countPosts();
+    int countfollowers(Graph* graph , std::string uname);
+    int countfollowing(Graph* graph , std::string uname);
 };
 
 #endif // MAINWINDOW_H
