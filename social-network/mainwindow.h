@@ -31,7 +31,7 @@ private:
     int countfollowing(Graph* graph , std::string uname);
     double calculateSimilarity(const string& user1, const string& user2);
 
-    vector<string> suggestUsers( string& currentUser);
+    vector<string>* suggestUsers( string& currentUser);
 };
 
 #endif // MAINWINDOW_H

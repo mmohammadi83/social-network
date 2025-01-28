@@ -581,6 +581,9 @@ debug/moc_editprofile.cpp: ../social-network/editprofile.h \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/QIcon \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/qicon.h \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QDebug \
+		../social-network/database.h \
+		../social-network/users.h \
+		../social-network/graph.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/bin/moc.exe
 	C:\Qt\Qt5.13.1\5.13.1\mingw73_64\bin\moc.exe $(DEFINES) --include "E:/daneshgah/data structure/main project/social-network-team/build-social-network-Desktop_Qt_5_13_1_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/Qt5.13.1/5.13.1/mingw73_64/mkspecs/win32-g++ -I"E:/daneshgah/data structure/main project/social-network-team/social-network" -IC:/Qt/Qt5.13.1/5.13.1/mingw73_64/include -IC:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets -IC:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui -IC:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtANGLE -IC:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtSql -IC:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore -I. -IC:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.1/Tools/mingw730_64/x86_64-w64-mingw32/include ..\social-network\editprofile.h -o debug\moc_editprofile.cpp
@@ -924,7 +927,14 @@ debug/main.o: ../social-network/main.cpp C:/Qt/Qt5.13.1/5.13.1/mingw73_64/includ
 		../social-network/login.h \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QDialog \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qdialog.h \
-		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QDebug
+		../social-network/mainwindow.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QMainWindow \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qmainwindow.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qtabwidget.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/qicon.h \
+		../social-network/graph.h \
+		../social-network/users.h \
+		../social-network/database.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o ..\social-network\main.cpp
 
 debug/mainwindow.o: ../social-network/mainwindow.cpp ../social-network/mainwindow.h \
@@ -1038,7 +1048,18 @@ debug/mainwindow.o: ../social-network/mainwindow.cpp ../social-network/mainwindo
 		../social-network/users.h \
 		../social-network/database.h \
 		ui_mainwindow.h \
-		../social-network/showmessages.h
+		../social-network/showmessages.h \
+		../social-network/editprofile.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QDialog \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qdialog.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QFileDialog \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qfiledialog.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/qdir.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/qfileinfo.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QFile \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/QPixmap \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/QIcon \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\social-network\mainwindow.cpp
 
 debug/showmessages.o: ../social-network/showmessages.cpp ../social-network/showmessages.h \
@@ -1271,6 +1292,9 @@ debug/editprofile.o: ../social-network/editprofile.cpp ../social-network/editpro
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/QIcon \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/qicon.h \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QDebug \
+		../social-network/database.h \
+		../social-network/users.h \
+		../social-network/graph.h \
 		ui_editprofile.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\editprofile.o ..\social-network\editprofile.cpp
 

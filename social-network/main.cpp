@@ -9,6 +9,9 @@ int main(int argc, char *argv[])
     std::string uname;
     login log(&uname);
     log.exec();
+    if(uname == "")
+        return 0;
+
     MainWindow mw(uname);
     mw.show();
 

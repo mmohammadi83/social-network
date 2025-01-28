@@ -2,16 +2,19 @@
 #include <iostream>
 #include <map>
 #include <list>
+#include <vector>
 #include "users.h"
 
 using namespace std;
 
+class Node : public users{
+public:
+    Node(std::string un , std::string n , std::string p , int ag , std::string gm):users(un , n , p , ag , gm){}
+};
+
 class Graph{
 private: 
-    class Node : public users{
-    public:
-        Node(std::string un , std::string n , std::string p , int ag , std::string gm):users(un , n , p , ag , gm){}
-    };
+
 
     map<string , Node*> nodes;
     map<Node* , list<Node*>*> naighborList; 
@@ -62,8 +65,8 @@ public:
         return nullptr;
     }
 
-    vector<string> getAllUsers() {
-              vector<string> userList;
+    vector<std::string> getAllUsers() {
+              vector<std::string> userList;
               for (const auto& node : nodes) {
                   userList.push_back(node.first);
               }

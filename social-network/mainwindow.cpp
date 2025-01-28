@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "showmessages.h"
 #include "editprofile.h"
+#include <set>
 
 MainWindow::MainWindow(std::string uname , QWidget *parent)
     : QMainWindow(parent)
@@ -35,33 +36,37 @@ void MainWindow::on_pushButton_clicked()
 
 double MainWindow::calculateSimilarity(const string &user1, const string &user2)
 {
-    list<Graph::Node*> followers1=graph->getFollowers(user1);
+    list<Node*>* followers1 = graph->getFollowers(user1);
 
-    list<Graph::Node*> followers2=graph->getFollowers(user2);
+    list<Node*>* followers2=graph->getFollowers(user2);
     set<string> commonFollowers;
-    for(auto folower:followers1)
+
+    for(auto follower:*followers1)
     {
-        for(auto followers2:followers2)
+        for(auto follower2:*followers2)
         {
-            if(follower->getUsername()==followers2->getUsername())
+            if(follower->getUName()==follower2->getUName())
             {
-                commonFollowers.insert(folower->getUsername());
+                commonFollowers.insert(follower->getUName());
+            }
         }
     }
+
     set<string> totalFollowers;
-    for(auto follower:followers1)
+    for(auto follower:*followers1)
     {
-        totalFollowers.insert(follower->getUsername());
+        totalFollowers.insert(follower->getUName());
     }
-    for(auto follower:followers2)
+    for(auto follower:*followers2)
     {
-        totalFollowers.insert(follower->getUsername());
+        totalFollowers.insert(follower->getUName());
     }
     if(totalFollowers.size()==0)
     {
         return 0;
     }
     return static_cast<double>(commonFollowers.size())/totalFollowers.size();
+
 }
 
 
@@ -83,29 +88,29 @@ vector<string>* MainWindow::suggestUsers(string &currentUser)
     });
 
 
-vector<string>* result=new vector<string>();
-if (all_of(suggestions.begin(), suggestions.end(), [](const pair<string, double>& p)
-{
-    return p.second== 0.0;
-})){
-    vector<string> newUsers;
-    for(const string& user:allUsers){
-        if(user!=currentUser){
-            newUsers.push_back(user);
+    vector<string>* result=new vector<string>();
+    if (all_of(suggestions.begin(), suggestions.end(), [](const pair<string, double>& p)
+    {
+        return p.second== 0.0;
+    })){
+        vector<string> newUsers;
+        for(const string& user:allUsers){
+            if(user!=currentUser){
+                newUsers.push_back(user);
+            }
+        }
+        for(int i=0;i<min(6,static_cast<int>(newUsers.size()));i++){
+            result->push_back(newUsers[i]);
         }
     }
-    for(int i=0;i<min(6,(int)newUsers.size());i++){
-        result->push_back(newUsers[i]);
+    else
+    {
+            for(int i=0;i<min(6,static_cast<int>(suggestions.size()));i++)
+        {
+            result->push_back((suggestions[i].first));
+        }
     }
-}
-else
-{
-    for(int i=0;i<min(6,(int)suggestions.size());i++)
-{
-    result->push_back((suggestions[i].first));
-}
-}
-return result;
+    return result;
 }
 
 
