@@ -18,9 +18,9 @@ private:
 public:
     void addNode(std::string un , std::string n , std::string p , int ag , std::string gm){
         
-        if(!nodes.count(n)){
+        if(!nodes.count(un)){
             Node* temp = new Node(un , n , p , ag , gm);
-            pair<string , Node*> p(n , temp);
+            pair<string , Node*> p(un , temp);
             nodes.insert(p);
             pair<Node* , list<Node*>*> l(temp , new list<Node*>);
             naighborList.insert(l);
@@ -53,5 +53,21 @@ public:
         
         naighborList[nodes[from]]->remove(nodes[to]);
     }
+
+    list<Node*>* getFollowers(std::string uname){
+        if(nodes.count(uname))
+            return naighborList[nodes[uname]];
+
+
+        return nullptr;
+    }
+
+    vector<string> getAllUsers() {
+              vector<string> userList;
+              for (const auto& node : nodes) {
+                  userList.push_back(node.first);
+              }
+              return userList;
+          }
 };
 

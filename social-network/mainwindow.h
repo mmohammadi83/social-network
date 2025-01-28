@@ -28,6 +28,9 @@ private:
     int countPosts();
     int countfollowers(Graph* graph , std::string uname);
     int countfollowing(Graph* graph , std::string uname);
+    double calculateSimilarity(const string& user1, const string& user2);
+
+    vector<string> suggestUsers( string& currentUser);
 };
 
 #endif // MAINWINDOW_H

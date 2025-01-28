@@ -38,23 +38,23 @@ public:
     {
         if (showmessages->objectName().isEmpty())
             showmessages->setObjectName(QStringLiteral("showmessages"));
-        showmessages->resize(1186, 901);
+        showmessages->resize(914, 699);
         centralwidget = new QWidget(showmessages);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         chatDisplay = new QTextEdit(centralwidget);
         chatDisplay->setObjectName(QStringLiteral("chatDisplay"));
-        chatDisplay->setGeometry(QRect(30, 40, 1101, 701));
+        chatDisplay->setGeometry(QRect(80, 40, 731, 531));
         chatDisplay->setReadOnly(true);
         messageInput = new QLineEdit(centralwidget);
         messageInput->setObjectName(QStringLiteral("messageInput"));
-        messageInput->setGeometry(QRect(40, 780, 721, 31));
+        messageInput->setGeometry(QRect(80, 590, 601, 31));
         sendButton = new QPushButton(centralwidget);
         sendButton->setObjectName(QStringLiteral("sendButton"));
-        sendButton->setGeometry(QRect(790, 780, 112, 34));
+        sendButton->setGeometry(QRect(700, 590, 112, 34));
         showmessages->setCentralWidget(centralwidget);
         menubar = new QMenuBar(showmessages);
         menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1186, 30));
+        menubar->setGeometry(QRect(0, 0, 914, 20));
         showmessages->setMenuBar(menubar);
         statusbar = new QStatusBar(showmessages);
         statusbar->setObjectName(QStringLiteral("statusbar"));
