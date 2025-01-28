@@ -77,8 +77,8 @@ vector<string>* MainWindow::suggestUsers(string &currentUser)
     sort(suggestions.begin(),suggestions.end(),[](const pair<string,double>& a,const pair<string,double>& b)
     {
         return a.second>b.second;
-    }
-};
+    });
+
 
 vector<string>* result=new vector<string>();
 if (all_of(suggestions.begin(), suggestions.end(), [](const pair<string, double>& p)
