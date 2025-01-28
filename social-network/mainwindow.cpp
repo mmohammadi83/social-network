@@ -12,14 +12,8 @@ MainWindow::MainWindow(std::string uname , QWidget *parent)
     this->uname = uname;
     graph = new Graph;
     DataBase::pushGraph(graph);
-    users user;
-    DataBase::setUserFromDB(&user , uname);
-    ui->name->setText(QString::fromStdString(user.getName()));
-    ui->gmail->setText(QString::fromStdString(user.getgmail()));
-    ui->uname->setText(QString::fromStdString(uname));
-    ui->age->setNum( user.getage());
 
-
+    refreshPage();
 }
 
 MainWindow::~MainWindow()
@@ -30,8 +24,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    editprofile edit(uname);
-    edit.exec();
+    editprofile* edit = new editprofile(uname);
+    edit->exec();
+    delete edit;
+    edit = nullptr;
 }
 
 double MainWindow::calculateSimilarity(const string &user1, const string &user2)
@@ -113,4 +109,40 @@ vector<string>* MainWindow::suggestUsers(string &currentUser)
     return result;
 }
 
+void MainWindow::refreshPage()
+{
+    users user;
+    DataBase::setUserFromDB(&user , uname);
+    ui->name->setText(QString::fromStdString(user.getName()));
+    ui->gmail->setText(QString::fromStdString(user.getgmail()));
+    ui->uname->setText(QString::fromStdString(uname));
+    ui->age->setNum( user.getage());
+    QString path = DataBase::setProfile(uname);
+    QPixmap pixmap(path);
+    QPixmap roundedPixmap(ui->prof->size());
+    roundedPixmap.fill(Qt::transparent);
 
+    QPainter painter(&roundedPixmap);
+    painter.setRenderHint(QPainter::Antialiasing);
+    QPainterPath path2;
+    path2.addEllipse(roundedPixmap.rect());
+    painter.setClipPath(path2);
+    painter.drawPixmap(0, 0, pixmap.scaled(ui->prof->size(), Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation));
+    painter.end();
+
+    QIcon buttonIcon(roundedPixmap);
+
+    ui->prof->setIcon(buttonIcon);
+    ui->prof->setIconSize(ui->prof->size());
+}
+
+
+
+void MainWindow::on_prof_clicked()
+{
+    editprofile* edit = new editprofile(uname);
+    edit->exec();
+    delete edit;
+    edit = nullptr;
+    refreshPage();
+}

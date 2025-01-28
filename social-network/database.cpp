@@ -151,6 +151,7 @@ void DataBase::pushGraph(Graph *graph)
         std::string to = query.value(1).toString().toStdString();
         graph->addEdge(from , to);
     }
+    qDebug() << "graph pushed";
     db.close();
 }
 
@@ -194,6 +195,10 @@ bool DataBase::setUserFromDB(users *user, string uname)
 
 void DataBase::addProfile(string uname, string path)
 {
+    if(path == ""){
+        qDebug() << "path is empty";
+        return ;
+    }
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("data.db");
 
@@ -215,9 +220,72 @@ void DataBase::addProfile(string uname, string path)
         return ;
     }
     qDebug() << "profile and user added successfuli";
+    db.close();
     return;
 
 }
+
+void DataBase::updateUser(string uname , string name, string pass, int age, string gmail)
+{
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("data.db");
+
+    if(!db.open()){
+        qDebug() << "faild to open database";
+        return ;
+    }
+
+    QSqlQuery query;
+    query.prepare("UPDATE user SET name = :name , age = :age , gmail = :gmail , password = :pass "
+                  "WHERE userName = :uname");
+    query.bindValue(":name", QString::fromStdString(name).trimmed());
+    query.bindValue(":age", age);
+    query.bindValue(":gmail", QString::fromStdString(gmail).trimmed());
+    query.bindValue(":pass", QString::fromStdString(pass).trimmed());
+    query.bindValue(":uname", QString::fromStdString(uname).trimmed());
+
+    if(!query.exec()){
+        qDebug() << "faild to execute";
+        db.close();
+        return ;
+    }
+    qDebug() << "profile edited successfuli";
+    db.close();
+    return;
+}
+
+QString DataBase::setProfile(string uname)
+{
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("data.db");
+
+    QString defualtPath = ":/new/prefix1/defualt.jpg";
+    if(!db.open()){
+        qDebug() << "faild to open database";
+        return defualtPath;
+    }
+
+    QSqlQuery query;
+    query.prepare("SELECT * FROM profiles WHERE userName = :uname");
+    query.bindValue(":uname", QString::fromStdString(uname).trimmed());
+
+    if(!query.exec()){
+        qDebug() << "faild to execute";
+        db.close();
+        return defualtPath;
+    }
+    if(!query.next()){
+        qDebug() << "profile image not exists";
+        return defualtPath;
+    }
+    QString suffix = QFileInfo(query.value(1).toString()).suffix().toLower();
+    QString destinationPath = "./profiles/"+QString::fromStdString(uname)+"."+suffix;
+    qDebug() << "profile image loaded";
+    db.close();
+    return destinationPath;
+}
+
+
 
 
 

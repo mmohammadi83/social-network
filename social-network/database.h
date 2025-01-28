@@ -2,6 +2,10 @@
 #define DATABASE_H
 #include "users.h"
 #include "graph.h"
+#include <QString>
+#include <QFileInfo>
+#include <QPainter>
+#include <QPainterPath>
 
 class DataBase
 {
@@ -14,6 +18,8 @@ public:
     static void pushGraph(Graph* graph);
     static bool setUserFromDB(users* user , std::string uname);
     static void addProfile(std::string uname , std::string path);
+    static void updateUser(std::string uname ,std::string name , std::string pass , int age , std::string gmail);
+    static QString setProfile(string uname);
 };
 
 #endif // DATABASE_H

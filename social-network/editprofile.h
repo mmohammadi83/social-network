@@ -30,6 +30,8 @@ private slots:
 
     void on_deleteAcount_clicked();
 
+    void on_profButton_clicked();
+
 private:
     Ui::editprofile *ui;
     std::string uname;

@@ -5,6 +5,7 @@ debug/mainwindow.o
 debug/showmessages.o
 debug/users.o
 debug/editprofile.o
+debug/qrc_background.o
 debug/moc_login.o
 debug/moc_mainwindow.o
 debug/moc_showmessages.o

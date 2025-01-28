@@ -19,29 +19,13 @@ color: rgb(255, 255, 255);
 border-radius: 10px;
 font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;</string>
   </property>
-  <widget class="QPushButton" name="profile">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>30</y>
-     <width>181</width>
-     <height>161</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-radius: 85px;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>60</y>
-     <width>121</width>
-     <height>20</height>
+     <x>330</x>
+     <y>80</y>
+     <width>171</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
@@ -51,10 +35,10 @@ font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>380</x>
+     <x>330</x>
      <y>30</y>
-     <width>91</width>
-     <height>21</height>
+     <width>141</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
@@ -64,10 +48,10 @@ font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;</string>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>90</y>
-     <width>81</width>
-     <height>21</height>
+     <x>330</x>
+     <y>130</y>
+     <width>131</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
@@ -77,36 +61,23 @@ font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;</string>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>120</y>
-     <width>81</width>
-     <height>31</height>
+     <x>330</x>
+     <y>180</y>
+     <width>131</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
     <string>gmail :</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>380</x>
-     <y>150</y>
-     <width>91</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>password :</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>240</y>
-     <width>111</width>
-     <height>31</height>
+     <x>40</x>
+     <y>290</y>
+     <width>181</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
@@ -116,10 +87,10 @@ font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;</string>
   <widget class="QLabel" name="label_8">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>300</y>
-     <width>111</width>
-     <height>31</height>
+     <x>40</x>
+     <y>360</y>
+     <width>191</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="text">
@@ -129,10 +100,10 @@ font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;</string>
   <widget class="QLabel" name="label_9">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>360</y>
-     <width>141</width>
-     <height>31</height>
+     <x>40</x>
+     <y>440</y>
+     <width>191</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="text">
@@ -142,10 +113,10 @@ font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;</string>
   <widget class="QLabel" name="label_10">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>420</y>
-     <width>151</width>
-     <height>31</height>
+     <x>40</x>
+     <y>520</y>
+     <width>201</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="text">
@@ -155,10 +126,10 @@ font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;</string>
   <widget class="QLineEdit" name="linenewname">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>240</y>
-     <width>241</width>
-     <height>31</height>
+     <x>240</x>
+     <y>290</y>
+     <width>321</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -169,10 +140,10 @@ color: rgb(0, 0, 0);</string>
   <widget class="QLineEdit" name="linenewage">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>300</y>
-     <width>241</width>
-     <height>31</height>
+     <x>240</x>
+     <y>370</y>
+     <width>321</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -183,10 +154,10 @@ color: rgb(0, 0, 0);</string>
   <widget class="QLineEdit" name="linenewgmail">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>360</y>
-     <width>241</width>
-     <height>31</height>
+     <x>240</x>
+     <y>450</y>
+     <width>321</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -197,10 +168,10 @@ color: rgb(0, 0, 0);</string>
   <widget class="QLineEdit" name="linenewpassword">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>420</y>
-     <width>241</width>
-     <height>31</height>
+     <x>240</x>
+     <y>530</y>
+     <width>321</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -211,10 +182,10 @@ color: rgb(0, 0, 0);</string>
   <widget class="QLabel" name="labeloldname">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>60</y>
-     <width>151</width>
-     <height>21</height>
+     <x>520</x>
+     <y>80</y>
+     <width>251</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
@@ -224,10 +195,10 @@ color: rgb(0, 0, 0);</string>
   <widget class="QLabel" name="labeloldusername">
    <property name="geometry">
     <rect>
-     <x>510</x>
+     <x>520</x>
      <y>30</y>
-     <width>151</width>
-     <height>21</height>
+     <width>251</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
@@ -237,10 +208,10 @@ color: rgb(0, 0, 0);</string>
   <widget class="QLabel" name="labeloldage">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>90</y>
-     <width>151</width>
-     <height>21</height>
+     <x>520</x>
+     <y>130</y>
+     <width>251</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
@@ -250,23 +221,10 @@ color: rgb(0, 0, 0);</string>
   <widget class="QLabel" name="labeloldgmail">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>120</y>
-     <width>151</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>empty</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labeloldpassword">
-   <property name="geometry">
-    <rect>
-     <x>510</x>
-     <y>150</y>
-     <width>151</width>
-     <height>31</height>
+     <x>520</x>
+     <y>180</y>
+     <width>251</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
@@ -277,9 +235,9 @@ color: rgb(0, 0, 0);</string>
    <property name="geometry">
     <rect>
      <x>620</x>
-     <y>230</y>
-     <width>151</width>
-     <height>41</height>
+     <y>320</y>
+     <width>181</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -294,9 +252,9 @@ color: rgb(0, 0, 0);</string>
    <property name="geometry">
     <rect>
      <x>620</x>
-     <y>290</y>
-     <width>151</width>
-     <height>41</height>
+     <y>420</y>
+     <width>181</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -311,9 +269,9 @@ color: rgb(0, 0, 0);</string>
    <property name="geometry">
     <rect>
      <x>620</x>
-     <y>350</y>
-     <width>151</width>
-     <height>41</height>
+     <y>510</y>
+     <width>181</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -322,6 +280,22 @@ color: rgb(0, 0, 0);</string>
    </property>
    <property name="text">
     <string>delete acount</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="profButton">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>50</y>
+     <width>171</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>

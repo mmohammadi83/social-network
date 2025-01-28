@@ -24,7 +24,6 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QPushButton *pushButton;
     QLabel *label;
     QLabel *label_2;
     QLabel *label_3;
@@ -35,6 +34,7 @@ public:
     QLabel *age;
     QLabel *gmail;
     QLabel *uname;
+    QPushButton *prof;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -50,12 +50,6 @@ public:
 ""));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(50, 20, 181, 171));
-        pushButton->setStyleSheet(QString::fromUtf8("border-radius: 85px;\n"
-"background-color: rgb(255, 255, 255);\n"
-""));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(270, 110, 91, 41));
@@ -76,16 +70,20 @@ public:
         following->setGeometry(QRect(860, 110, 91, 41));
         name = new QLabel(centralwidget);
         name->setObjectName(QString::fromUtf8("name"));
-        name->setGeometry(QRect(50, 200, 201, 41));
+        name->setGeometry(QRect(50, 200, 481, 41));
         age = new QLabel(centralwidget);
         age->setObjectName(QString::fromUtf8("age"));
-        age->setGeometry(QRect(50, 250, 191, 41));
+        age->setGeometry(QRect(50, 250, 231, 41));
         gmail = new QLabel(centralwidget);
         gmail->setObjectName(QString::fromUtf8("gmail"));
-        gmail->setGeometry(QRect(50, 300, 271, 41));
+        gmail->setGeometry(QRect(50, 300, 591, 41));
         uname = new QLabel(centralwidget);
         uname->setObjectName(QString::fromUtf8("uname"));
         uname->setGeometry(QRect(270, 20, 421, 41));
+        prof = new QPushButton(centralwidget);
+        prof->setObjectName(QString::fromUtf8("prof"));
+        prof->setGeometry(QRect(50, 10, 181, 181));
+        prof->setStyleSheet(QString::fromUtf8(""));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -103,7 +101,6 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        pushButton->setText(QString());
         label->setText(QCoreApplication::translate("MainWindow", "posts:", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "followers:", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "following:", nullptr));
@@ -114,6 +111,7 @@ public:
         age->setText(QCoreApplication::translate("MainWindow", "age", nullptr));
         gmail->setText(QCoreApplication::translate("MainWindow", "gmail", nullptr));
         uname->setText(QCoreApplication::translate("MainWindow", "uname", nullptr));
+        prof->setText(QString());
     } // retranslateUi
 
 };

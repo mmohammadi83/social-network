@@ -5,6 +5,7 @@
 #include "graph.h"
 #include "database.h"
 
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -23,6 +24,9 @@ public:
 
     void on_pushButton_clicked();
 
+private slots:
+    void on_prof_clicked();
+
 private:
     Ui::MainWindow *ui;
     std::string uname;
@@ -30,8 +34,8 @@ private:
     int countfollowers(Graph* graph , std::string uname);
     int countfollowing(Graph* graph , std::string uname);
     double calculateSimilarity(const string& user1, const string& user2);
-
     vector<string>* suggestUsers( string& currentUser);
+    void refreshPage();
 };
 
 #endif // MAINWINDOW_H

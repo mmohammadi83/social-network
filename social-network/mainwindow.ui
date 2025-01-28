@@ -21,24 +21,6 @@ font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>20</y>
-      <width>181</width>
-      <height>171</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-radius: 85px;
-background-color: rgb(255, 255, 255);
-</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
@@ -122,7 +104,7 @@ background-color: rgb(255, 255, 255);
      <rect>
       <x>50</x>
       <y>200</y>
-      <width>201</width>
+      <width>481</width>
       <height>41</height>
      </rect>
     </property>
@@ -135,7 +117,7 @@ background-color: rgb(255, 255, 255);
      <rect>
       <x>50</x>
       <y>250</y>
-      <width>191</width>
+      <width>231</width>
       <height>41</height>
      </rect>
     </property>
@@ -148,7 +130,7 @@ background-color: rgb(255, 255, 255);
      <rect>
       <x>50</x>
       <y>300</y>
-      <width>271</width>
+      <width>591</width>
       <height>41</height>
      </rect>
     </property>
@@ -167,6 +149,22 @@ background-color: rgb(255, 255, 255);
     </property>
     <property name="text">
      <string>uname</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="prof">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>10</y>
+      <width>181</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>
