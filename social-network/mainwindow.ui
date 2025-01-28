@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>982</width>
-    <height>682</height>
+    <width>990</width>
+    <height>721</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,14 +16,38 @@
   <property name="styleSheet">
    <string notr="true">background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(121, 121, 121, 255), stop:1 rgba(182, 182, 182, 255));</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>140</y>
+      <width>93</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PushButton</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listWidget">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>440</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>982</width>
-     <height>20</height>
+     <width>990</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>

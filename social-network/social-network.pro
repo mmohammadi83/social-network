@@ -20,25 +20,25 @@ SOURCES += \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
-    profile.cpp \
     showmessages.cpp \
-    users.cpp
+    users.cpp \
+    editprofile.cpp
 
 HEADERS += \
     database.h \
     login.h \
     mainwindow.h \
     message.h \
-    profile.h \
     showmessages.h \
     users.h \
-    graph.h
+    graph.h \
+    editprofile.h
 
 FORMS += \
     login.ui \
     mainwindow.ui \
-    profile.ui \
-    showmessages.ui
+    showmessages.ui \
+    editprofile.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

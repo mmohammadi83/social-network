@@ -2,7 +2,7 @@
 #include "ui_login.h"
 #include "database.h"
 #include "users.h"
-#include "profile.h" 
+#include "profilepage.h" 
 #include "mainwindow.h"
 
 
@@ -30,7 +30,7 @@ void login::on_loginB_clicked()
     std::string uname = ui->unameLog->text().toStdString();
     std::string pass = ui->passLog->text().toStdString();
     int validation = DataBase::validationUser(uname , pass);
-    MainWindow mw;
+    MainWindow mw(uname);
     switch (validation) {
         case 0:
             ui->errorLogIn->hide();

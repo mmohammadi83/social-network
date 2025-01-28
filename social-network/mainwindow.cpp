@@ -20,3 +20,8 @@ void MainWindow::someFunction()
     showmessages *messagesWindow = new showmessages(this);
     messagesWindow->show();
 }
+
+void MainWindow::on_pushButton_clicked()
+{
+
+}

@@ -1,0 +1,15 @@
+INPUT(
+./release\database.o
+./release\login.o
+./release\main.o
+./release\mainwindow.o
+./release\showmessages.o
+./release\users.o
+./release\profilepage.o
+./release\editprofile.o
+./release\moc_login.o
+./release\moc_mainwindow.o
+./release\moc_showmessages.o
+./release\moc_profilepage.o
+./release\moc_editprofile.o
+);
