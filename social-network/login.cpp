@@ -2,7 +2,6 @@
 #include "ui_login.h"
 #include "database.h"
 #include "users.h"
-#include "profile.h" 
 #include "mainwindow.h"
 
 

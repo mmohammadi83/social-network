@@ -42,15 +42,20 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(982, 682);
+        MainWindow->resize(990, 721);
         MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(70, 70, 70);\n"
 "color: rgb(255, 255, 255);\n"
+"border-radius: 10px;\n"
+"font: 25 12pt \"Microsoft JhengHei UI Light\";\n"
 ""));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(50, 20, 181, 171));
+        pushButton->setStyleSheet(QString::fromUtf8("border-radius: 85px;\n"
+"background-color: rgb(255, 255, 255);\n"
+""));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(260, 110, 91, 41));
@@ -62,7 +67,7 @@ public:
         label_3->setGeometry(QRect(720, 110, 91, 41));
         posts = new QLabel(centralwidget);
         posts->setObjectName(QString::fromUtf8("posts"));
-        posts->setGeometry(QRect(360, 110, 91, 41));
+        posts->setGeometry(QRect(340, 110, 91, 41));
         followers = new QLabel(centralwidget);
         followers->setObjectName(QString::fromUtf8("followers"));
         followers->setGeometry(QRect(590, 110, 91, 41));
@@ -71,20 +76,20 @@ public:
         following->setGeometry(QRect(820, 110, 91, 41));
         name = new QLabel(centralwidget);
         name->setObjectName(QString::fromUtf8("name"));
-        name->setGeometry(QRect(50, 200, 91, 41));
+        name->setGeometry(QRect(50, 200, 201, 41));
         age = new QLabel(centralwidget);
         age->setObjectName(QString::fromUtf8("age"));
-        age->setGeometry(QRect(50, 250, 91, 41));
+        age->setGeometry(QRect(50, 250, 191, 41));
         gmail = new QLabel(centralwidget);
         gmail->setObjectName(QString::fromUtf8("gmail"));
-        gmail->setGeometry(QRect(50, 300, 91, 41));
+        gmail->setGeometry(QRect(50, 300, 271, 41));
         uname = new QLabel(centralwidget);
         uname->setObjectName(QString::fromUtf8("uname"));
         uname->setGeometry(QRect(270, 20, 421, 41));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 982, 20));
+        menubar->setGeometry(QRect(0, 0, 982, 23));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -98,17 +103,17 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton->setText(QString());
         label->setText(QCoreApplication::translate("MainWindow", "posts:", nullptr));
-        label_2->setText(QCoreApplication::translate("MainWindow", "followers", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "followers:", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "following:", nullptr));
         posts->setText(QString());
         followers->setText(QString());
         following->setText(QString());
-        name->setText(QString());
-        age->setText(QString());
-        gmail->setText(QString());
-        uname->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        name->setText(QCoreApplication::translate("MainWindow", "name", nullptr));
+        age->setText(QCoreApplication::translate("MainWindow", "age", nullptr));
+        gmail->setText(QCoreApplication::translate("MainWindow", "gmail", nullptr));
+        uname->setText(QCoreApplication::translate("MainWindow", "uname", nullptr));
     } // retranslateUi
 
 };
