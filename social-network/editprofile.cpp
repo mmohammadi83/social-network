@@ -30,9 +30,30 @@ void editprofile::on_pushButton_clicked()
         } else {
             qDebug() << "Failed to copy file. Error:" << file.errorString();
         }
+
+    DataBase::addProfile(uname , destinationPath.toStdString());
+
     QPixmap pixmap(destinationPath);
     QIcon buttonIcon(pixmap.scaled(ui->profile->size(), Qt::KeepAspectRatioByExpanding));
 
     ui->profile->setIcon(buttonIcon);
     ui->profile->setIconSize(ui->profile->size());
+
+    qDebug() << "profile changed";
+
+}
+
+void editprofile::on_ok_clicked()
+{
+
+}
+
+void editprofile::on_cancel_clicked()
+{
+
+}
+
+void editprofile::on_deleteAcount_clicked()
+{
+
 }

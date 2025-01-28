@@ -7,6 +7,7 @@
 #include <QPixmap>
 #include <QIcon>
 #include <QDebug>
+#include "database.h"
 
 namespace Ui {
 class editprofile;
@@ -22,6 +23,12 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+
+    void on_ok_clicked();
+
+    void on_cancel_clicked();
+
+    void on_deleteAcount_clicked();
 
 private:
     Ui::editprofile *ui;

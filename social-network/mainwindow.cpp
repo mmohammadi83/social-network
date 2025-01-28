@@ -1,21 +1,23 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "showmessages.h"
+#include "editprofile.h"
 
 MainWindow::MainWindow(std::string uname , QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
-    Graph* graph = new Graph;
+    this->uname = uname;
+    graph = new Graph;
     DataBase::pushGraph(graph);
     users user;
     DataBase::setUserFromDB(&user , uname);
-    ui->age->setNum( user.getage());
     ui->name->setText(QString::fromStdString(user.getName()));
     ui->gmail->setText(QString::fromStdString(user.getgmail()));
     ui->uname->setText(QString::fromStdString(uname));
+    ui->age->setNum( user.getage());
+
 
 }
 
@@ -27,7 +29,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-
+    editprofile edit(uname);
+    edit.exec();
 }
 
 double MainWindow::calculateSimilarity(const string &user1, const string &user2)

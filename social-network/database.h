@@ -13,6 +13,7 @@ public:
     static int validationUser(std::string Uname , std::string pass);
     static void pushGraph(Graph* graph);
     static bool setUserFromDB(users* user , std::string uname);
+    static void addProfile(std::string uname , std::string path);
 };
 
 #endif // DATABASE_H
