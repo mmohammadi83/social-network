@@ -84,7 +84,7 @@ int DataBase::validationUser(std::string Uname, std::string pass)
 
     QSqlQuery query;
     query.prepare("SELECT password FROM user WHERE userName = :userName ");
-    query.bindValue(":userName" , QString::fromStdString(Uname));
+    query.bindValue(":userName" , QString::fromStdString(Uname).trimmed());
 
     if(!query.exec()){
         qDebug() << "faild to execute";
@@ -181,17 +181,42 @@ bool DataBase::setUserFromDB(users *user, string uname)
         return 0;
     }
 
-    std::string userName = query.value(1).toString().toStdString();
-    std::string password = query.value(2).toString().toStdString();
-    std::string name = query.value(3).toString().toStdString();
-    int age = query.value(4).toInt();
-    std::string gmail = query.value(5).toString().toStdString();
-
-
-    user = new users(userName , password , name , age , gmail);
+    user->setUName(query.value(1).toString().toStdString());
+    user->setPass(query.value(2).toString().toStdString());
+    user->setName(query.value(3).toString().toStdString());
+    user->setage(query.value(4).toInt());
+    user->setgmail(query.value(5).toString().toStdString());
+    qDebug() << "done set user from databace";
 
     db.close();
     return 1;
+}
+
+void DataBase::addProfile(string uname, string path)
+{
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("data.db");
+
+    if(!db.open()){
+        qDebug() << "faild to open database";
+        return ;
+    }
+
+    QSqlQuery query;
+    query.prepare("INSERT INTO profiles(userName , path)"
+                  "VALUES (:uname , :path)"
+                  "ON CONFLICT (userName) DO UPDATE SET path = :path");
+    query.bindValue(":uname", QString::fromStdString(uname).trimmed());
+    query.bindValue(":path", QString::fromStdString(path).trimmed());
+
+    if(!query.exec()){
+        qDebug() << "faild to execute";
+        db.close();
+        return ;
+    }
+    qDebug() << "profile and user added successfuli";
+    return;
+
 }
 
 

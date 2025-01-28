@@ -42,7 +42,7 @@ background-color: rgb(255, 255, 255);
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>260</x>
+      <x>270</x>
       <y>110</y>
       <width>91</width>
       <height>41</height>
@@ -55,9 +55,9 @@ background-color: rgb(255, 255, 255);
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>490</x>
+      <x>470</x>
       <y>110</y>
-      <width>91</width>
+      <width>121</width>
       <height>41</height>
      </rect>
     </property>
@@ -70,7 +70,7 @@ background-color: rgb(255, 255, 255);
      <rect>
       <x>720</x>
       <y>110</y>
-      <width>91</width>
+      <width>121</width>
       <height>41</height>
      </rect>
     </property>
@@ -81,9 +81,9 @@ background-color: rgb(255, 255, 255);
    <widget class="QLabel" name="posts">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>380</x>
       <y>110</y>
-      <width>91</width>
+      <width>71</width>
       <height>41</height>
      </rect>
     </property>
@@ -94,7 +94,7 @@ background-color: rgb(255, 255, 255);
    <widget class="QLabel" name="followers">
     <property name="geometry">
      <rect>
-      <x>590</x>
+      <x>620</x>
       <y>110</y>
       <width>91</width>
       <height>41</height>
@@ -107,7 +107,7 @@ background-color: rgb(255, 255, 255);
    <widget class="QLabel" name="following">
     <property name="geometry">
      <rect>
-      <x>820</x>
+      <x>860</x>
       <y>110</y>
       <width>91</width>
       <height>41</height>
@@ -175,7 +175,7 @@ background-color: rgb(255, 255, 255);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>982</width>
+     <width>990</width>
      <height>23</height>
     </rect>
    </property>

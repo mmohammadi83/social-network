@@ -5,10 +5,11 @@
 #include "mainwindow.h"
 
 
-login::login(QWidget *parent) :
+login::login(std::string* uname , QWidget *parent) :
     QDialog(parent),
     ui(new Ui::login)
 {
+    this->uname = uname;
     ui->setupUi(this);
     ui->errorSignUp->hide();
     ui->errorLogIn->hide();
@@ -29,7 +30,6 @@ void login::on_loginB_clicked()
     std::string uname = ui->unameLog->text().toStdString();
     std::string pass = ui->passLog->text().toStdString();
     int validation = DataBase::validationUser(uname , pass);
-    MainWindow mw(uname);
     switch (validation) {
         case 0:
             ui->errorLogIn->hide();
@@ -51,8 +51,8 @@ void login::on_loginB_clicked()
             ui->passIncorrect->hide();
             ui->errorServer->hide();
             ui->errorLogIn->hide();
-
-            mw.show();
+            *this->uname = uname;
+            this->close();
             break;
         case 4:
             ui->errorServer->hide();

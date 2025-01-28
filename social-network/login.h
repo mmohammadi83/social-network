@@ -12,7 +12,7 @@ class login : public QDialog
     Q_OBJECT
 
 public:
-    explicit login(QWidget *parent = nullptr);
+    explicit login(std::string* uname , QWidget *parent = nullptr);
     ~login();
 
 
@@ -23,6 +23,7 @@ private slots:
 
 private:
     Ui::login *ui;
+    std::string* uname;
 };
 
 #endif // LOGIN_H

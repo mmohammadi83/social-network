@@ -14,7 +14,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    Graph followGraph;
+    Graph* graph;
 
     MainWindow(std::string uname ,QWidget *parent = nullptr);
     ~MainWindow();
@@ -25,6 +25,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    std::string uname;
     int countPosts();
     int countfollowers(Graph* graph , std::string uname);
     int countfollowing(Graph* graph , std::string uname);
