@@ -6,6 +6,10 @@
 #include <QFileInfo>
 #include <QPainter>
 #include <QPainterPath>
+#include <QFile>
+#include <QPixmap>
+#include <QIcon>
+#include <QDebug>
 
 class DataBase
 {
@@ -20,6 +24,11 @@ public:
     static void addProfile(std::string uname , std::string path);
     static void updateUser(std::string uname ,std::string name , std::string pass , int age , std::string gmail);
     static QString setProfile(string uname);
+    static int countfollowers(std::string uname);
+    static int countfollowing(std::string uname);
+    static bool isFollowing(string from , string to);
+    static void follow(string from , string to);
+    static void unfollow(string from , string to);
 };
 
 #endif // DATABASE_H

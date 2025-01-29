@@ -113,6 +113,8 @@ void MainWindow::refreshPage()
 {
     users user;
     DataBase::setUserFromDB(&user , uname);
+    ui->followers->setNum(DataBase::countfollowers(uname));
+    ui->following->setNum(DataBase::countfollowing(uname));
     ui->name->setText(QString::fromStdString(user.getName()));
     ui->gmail->setText(QString::fromStdString(user.getgmail()));
     ui->uname->setText(QString::fromStdString(uname));
@@ -146,3 +148,7 @@ void MainWindow::on_prof_clicked()
     edit = nullptr;
     refreshPage();
 }
+
+
+
+

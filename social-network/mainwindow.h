@@ -27,12 +27,12 @@ public:
 private slots:
     void on_prof_clicked();
 
+
 private:
     Ui::MainWindow *ui;
     std::string uname;
     int countPosts();
-    int countfollowers(Graph* graph , std::string uname);
-    int countfollowing(Graph* graph , std::string uname);
+
     double calculateSimilarity(const string& user1, const string& user2);
     vector<string>* suggestUsers( string& currentUser);
     void refreshPage();

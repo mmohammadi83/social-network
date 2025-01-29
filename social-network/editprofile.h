@@ -3,10 +3,6 @@
 
 #include <QDialog>
 #include <QFileDialog>
-#include <QFile>
-#include <QPixmap>
-#include <QIcon>
-#include <QDebug>
 #include "database.h"
 
 namespace Ui {

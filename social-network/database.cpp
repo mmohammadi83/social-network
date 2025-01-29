@@ -149,7 +149,7 @@ void DataBase::pushGraph(Graph *graph)
     while(query.next()){
         std::string from = query.value(0).toString().toStdString();
         std::string to = query.value(1).toString().toStdString();
-        graph->addEdge(from , to);
+        graph->addEdge(to , from);
     }
     qDebug() << "graph pushed";
     db.close();
@@ -283,6 +283,142 @@ QString DataBase::setProfile(string uname)
     qDebug() << "profile image loaded";
     db.close();
     return destinationPath;
+}
+
+int DataBase::countfollowers(string uname)
+{
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("data.db");
+
+    if(!db.open()){
+        qDebug() << "faild to open database";
+        return 0;
+    }
+
+    QSqlQuery query;
+    query.prepare("SELECT COUNT(*) AS followers FROM followList WHERE userName = :uname");
+    query.bindValue(":uname", QString::fromStdString(uname).trimmed());
+
+    if(!query.exec()){
+        qDebug() << "faild to execute";
+        db.close();
+        return 0;
+    }
+    query.next();
+
+    int result = query.value(0).toInt();
+
+    db.close();
+    return result;
+
+}
+
+int DataBase::countfollowing(string uname)
+{
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("data.db");
+
+    if(!db.open()){
+        qDebug() << "faild to open database";
+        return 0;
+    }
+
+    QSqlQuery query;
+    query.prepare("SELECT COUNT(*) AS followers FROM followList WHERE following = :uname");
+    query.bindValue(":uname", QString::fromStdString(uname).trimmed());
+
+    if(!query.exec()){
+        qDebug() << "faild to execute";
+        db.close();
+        return 0;
+    }
+    query.next();
+
+    int result = query.value(0).toInt();
+
+    db.close();
+    return result;
+
+}
+
+bool DataBase::isFollowing(string from, string to)
+{
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("data.db");
+
+    if(!db.open()){
+        qDebug() << "faild to open database";
+        return 0;
+    }
+
+    QSqlQuery query;
+    query.prepare("SELECT COUNT(*) AS follow FROM followList WHERE userName = :from AND following = :to");
+    query.bindValue(":from", QString::fromStdString(from).trimmed());
+    query.bindValue(":to", QString::fromStdString(to).trimmed());
+
+    if(!query.exec()){
+        qDebug() << "faild to execute";
+        db.close();
+        return 0;
+    }
+    query.next();
+
+    int result = query.value(0).toInt();
+
+    db.close();
+    return result;
+}
+
+void DataBase::follow(string from, string to)
+{
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("data.db");
+
+    if(!db.open()){
+        qDebug() << "faild to open database";
+        return ;
+    }
+
+    QSqlQuery query;
+    query.prepare("INSERT INTO followList(userName , following) VALUES(:from , :to)");
+    query.bindValue(":from", QString::fromStdString(from).trimmed());
+    query.bindValue(":to", QString::fromStdString(to).trimmed());
+
+    if(!query.exec()){
+        qDebug() << "faild to execute";
+        db.close();
+        return ;
+    }
+
+    qDebug() << "following done";
+    db.close();
+
+}
+
+void DataBase::unfollow(string from, string to)
+{
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("data.db");
+
+    if(!db.open()){
+        qDebug() << "faild to open database";
+        return ;
+    }
+
+    QSqlQuery query;
+    query.prepare("DELETE FROM followList WHERE userName = :from AND following = :to");
+    query.bindValue(":from", QString::fromStdString(from).trimmed());
+    query.bindValue(":to", QString::fromStdString(to).trimmed());
+
+    if(!query.exec()){
+        qDebug() << "faild to execute";
+        db.close();
+        return ;
+    }
+
+    qDebug() << "unfollowing done";
+    db.close();
+
 }
 
 
