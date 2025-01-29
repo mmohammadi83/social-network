@@ -13,56 +13,95 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QDialog>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
-#include <QtWidgets/QStatusBar>
-#include <QtWidgets/QWidget>
+#include <QtWidgets/QPushButton>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_profile
 {
 public:
-    QWidget *centralwidget;
-    QLabel *label;
+    QLabel *followers;
     QLabel *label_2;
-    QMenuBar *menubar;
-    QStatusBar *statusbar;
+    QLabel *following;
+    QLabel *label_3;
+    QLabel *uname;
+    QLabel *gmail;
+    QLabel *name;
+    QLabel *age;
+    QPushButton *unfollow;
+    QPushButton *follow;
+    QPushButton *prof;
 
-    void setupUi(QMainWindow *profile)
+    void setupUi(QDialog *profile)
     {
         if (profile->objectName().isEmpty())
             profile->setObjectName(QStringLiteral("profile"));
-        profile->resize(800, 600);
-        centralwidget = new QWidget(profile);
-        centralwidget->setObjectName(QStringLiteral("centralwidget"));
-        label = new QLabel(centralwidget);
-        label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(20, 0, 131, 161));
-        label_2 = new QLabel(centralwidget);
+        profile->resize(894, 690);
+        profile->setStyleSheet(QLatin1String("background-color: rgb(70, 70, 70);\n"
+"color: rgb(255, 255, 255);\n"
+"border-radius: 10px;\n"
+"font: 25 12pt \"Microsoft JhengHei UI Light\";\n"
+""));
+        followers = new QLabel(profile);
+        followers->setObjectName(QStringLiteral("followers"));
+        followers->setGeometry(QRect(550, 110, 91, 41));
+        label_2 = new QLabel(profile);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(20, 150, 81, 41));
-        profile->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(profile);
-        menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 26));
-        profile->setMenuBar(menubar);
-        statusbar = new QStatusBar(profile);
-        statusbar->setObjectName(QStringLiteral("statusbar"));
-        profile->setStatusBar(statusbar);
+        label_2->setGeometry(QRect(400, 110, 121, 41));
+        following = new QLabel(profile);
+        following->setObjectName(QStringLiteral("following"));
+        following->setGeometry(QRect(790, 110, 91, 41));
+        label_3 = new QLabel(profile);
+        label_3->setObjectName(QStringLiteral("label_3"));
+        label_3->setGeometry(QRect(650, 110, 121, 41));
+        uname = new QLabel(profile);
+        uname->setObjectName(QStringLiteral("uname"));
+        uname->setGeometry(QRect(290, 40, 421, 41));
+        gmail = new QLabel(profile);
+        gmail->setObjectName(QStringLiteral("gmail"));
+        gmail->setGeometry(QRect(60, 350, 591, 41));
+        name = new QLabel(profile);
+        name->setObjectName(QStringLiteral("name"));
+        name->setGeometry(QRect(60, 250, 481, 41));
+        age = new QLabel(profile);
+        age->setObjectName(QStringLiteral("age"));
+        age->setGeometry(QRect(60, 300, 231, 41));
+        unfollow = new QPushButton(profile);
+        unfollow->setObjectName(QStringLiteral("unfollow"));
+        unfollow->setGeometry(QRect(350, 470, 181, 51));
+        unfollow->setStyleSheet(QLatin1String("background-color: rgb(134, 134, 134);\n"
+""));
+        follow = new QPushButton(profile);
+        follow->setObjectName(QStringLiteral("follow"));
+        follow->setGeometry(QRect(350, 530, 181, 51));
+        follow->setStyleSheet(QLatin1String("background-color: rgb(134, 134, 134);\n"
+""));
+        prof = new QPushButton(profile);
+        prof->setObjectName(QStringLiteral("prof"));
+        prof->setGeometry(QRect(50, 50, 161, 151));
 
         retranslateUi(profile);
 
         QMetaObject::connectSlotsByName(profile);
     } // setupUi
 
-    void retranslateUi(QMainWindow *profile)
+    void retranslateUi(QDialog *profile)
     {
-        profile->setWindowTitle(QApplication::translate("profile", "MainWindow", Q_NULLPTR));
-        label->setText(QApplication::translate("profile", "labelProfilePic", Q_NULLPTR));
-        label_2->setText(QApplication::translate("profile", "name:", Q_NULLPTR));
+        profile->setWindowTitle(QApplication::translate("profile", "Dialog", Q_NULLPTR));
+        followers->setText(QString());
+        label_2->setText(QApplication::translate("profile", "followers:", Q_NULLPTR));
+        following->setText(QString());
+        label_3->setText(QApplication::translate("profile", "following:", Q_NULLPTR));
+        uname->setText(QApplication::translate("profile", "uname", Q_NULLPTR));
+        gmail->setText(QApplication::translate("profile", "gmail", Q_NULLPTR));
+        name->setText(QApplication::translate("profile", "name", Q_NULLPTR));
+        age->setText(QApplication::translate("profile", "age", Q_NULLPTR));
+        unfollow->setText(QApplication::translate("profile", "unfollow", Q_NULLPTR));
+        follow->setText(QApplication::translate("profile", "follow", Q_NULLPTR));
+        prof->setText(QString());
     } // retranslateUi
 
 };

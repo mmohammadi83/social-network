@@ -20,7 +20,9 @@ public:
 
         painter->save();
         painter->setRenderHint(QPainter::Antialiasing);
-        painter->setClipPath(QPainterPath().addEllipse(0, 0, 50, 50));
+        QPainterPath path;
+        path.addEllipse(0, 0, 50, 50);
+        painter->setClipPath(path);
         painter->drawPixmap(0, 0, pixmap);
         painter->restore();
     }
@@ -91,7 +93,7 @@ double MainWindow::calculateSimilarity(const string &user1, const string &user2)
 vector<string>* MainWindow::suggestUsers(string &currentUser)
 {
     vector<pair<string,double>> suggestions;
-    vector<string> allUsers=graph->getAllUsers();
+    vector<string> allUsers=DataBase::getAllUsers();
     for(const string& user:allUsers)
     {
         if(user!=currentUser)
@@ -182,8 +184,8 @@ void MainWindow::setImagesInListView()
 
     vector<string>* vimages = suggestUsers(uname);
     QStringList images;
-    for(auto& i : vimages){
-        images << i;
+    for(auto& i : *vimages){
+        images << DataBase::setProfile(i) ;
     }
 
     QStringListModel *model = new QStringListModel(images);

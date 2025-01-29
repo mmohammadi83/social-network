@@ -3,12 +3,14 @@ INPUT(
 ./release\login.o
 ./release\main.o
 ./release\mainwindow.o
+./release\profile.o
 ./release\showmessages.o
 ./release\users.o
 ./release\editprofile.o
 ./release\qrc_background.o
 ./release\moc_login.o
 ./release\moc_mainwindow.o
+./release\moc_profile.o
 ./release\moc_showmessages.o
 ./release\moc_editprofile.o
 );

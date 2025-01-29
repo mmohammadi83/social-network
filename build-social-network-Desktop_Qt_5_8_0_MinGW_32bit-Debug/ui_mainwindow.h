@@ -15,6 +15,7 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QListView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -38,6 +39,7 @@ public:
     QLabel *gmail;
     QLabel *uname;
     QPushButton *prof;
+    QListView *listView;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -45,7 +47,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(990, 721);
+        MainWindow->resize(1075, 798);
         MainWindow->setStyleSheet(QLatin1String("background-color: rgb(70, 70, 70);\n"
 "color: rgb(255, 255, 255);\n"
 "border-radius: 10px;\n"
@@ -61,7 +63,7 @@ public:
         label_2->setGeometry(QRect(470, 110, 121, 41));
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(720, 110, 121, 41));
+        label_3->setGeometry(QRect(770, 110, 121, 41));
         posts = new QLabel(centralwidget);
         posts->setObjectName(QStringLiteral("posts"));
         posts->setGeometry(QRect(380, 110, 71, 41));
@@ -70,7 +72,7 @@ public:
         followers->setGeometry(QRect(620, 110, 91, 41));
         following = new QLabel(centralwidget);
         following->setObjectName(QStringLiteral("following"));
-        following->setGeometry(QRect(860, 110, 91, 41));
+        following->setGeometry(QRect(910, 110, 91, 41));
         name = new QLabel(centralwidget);
         name->setObjectName(QStringLiteral("name"));
         name->setGeometry(QRect(50, 200, 481, 41));
@@ -87,10 +89,14 @@ public:
         prof->setObjectName(QStringLiteral("prof"));
         prof->setGeometry(QRect(50, 10, 181, 181));
         prof->setStyleSheet(QStringLiteral(""));
+        listView = new QListView(centralwidget);
+        listView->setObjectName(QStringLiteral("listView"));
+        listView->setGeometry(QRect(40, 470, 991, 191));
+        listView->setFlow(QListView::LeftToRight);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 990, 23));
+        menubar->setGeometry(QRect(0, 0, 1075, 31));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QStringLiteral("statusbar"));

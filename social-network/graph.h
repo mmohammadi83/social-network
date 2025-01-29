@@ -65,12 +65,6 @@ public:
         return nullptr;
     }
 
-    vector<std::string> getAllUsers() {
-              vector<std::string> userList;
-              for (const auto& node : nodes) {
-                  userList.push_back(node.first);
-              }
-              return userList;
-          }
+
 };
 

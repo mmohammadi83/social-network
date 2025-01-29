@@ -421,6 +421,31 @@ void DataBase::unfollow(string from, string to)
 
 }
 
+vector<string> DataBase::getAllUsers()
+{
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("data.db");
+    vector<string> listUsers;
+    if(!db.open()){
+        qDebug() << "faild to open database";
+        return listUsers;
+    }
+
+    QSqlQuery query;
+    query.prepare("SELECT name FROM user ORDER BY userID DESC;");
+
+    if(!query.exec()){
+        qDebug() << "faild to execute";
+        db.close();
+        return listUsers;
+    }
+    while(query.next()){
+        listUsers.push_back(query.value(0).toString().toStdString());
+    }
+    db.close();
+    return listUsers;
+}
+
 
 
 

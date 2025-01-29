@@ -10,6 +10,7 @@
 #include <QPixmap>
 #include <QIcon>
 #include <QDebug>
+#include <vector>
 
 class DataBase
 {
@@ -29,6 +30,7 @@ public:
     static bool isFollowing(string from , string to);
     static void follow(string from , string to);
     static void unfollow(string from , string to);
+    static vector<std::string> getAllUsers();
 };
 
 #endif // DATABASE_H
