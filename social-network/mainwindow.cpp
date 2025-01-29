@@ -3,6 +3,28 @@
 #include "showmessages.h"
 #include "editprofile.h"
 #include <set>
+#include <QListView>
+#include <QStringListModel>
+#include <QStyledItemDelegate>
+
+class CircleImageDelegate : public QStyledItemDelegate
+{
+public:
+    CircleImageDelegate(QObject *parent = nullptr) : QStyledItemDelegate(parent) {}
+
+    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override
+    {
+        QPixmap pixmap = index.data(Qt::DecorationRole).value<QPixmap>();
+
+        pixmap = pixmap.scaled(50, 50, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+
+        painter->save();
+        painter->setRenderHint(QPainter::Antialiasing);
+        painter->setClipPath(QPainterPath().addEllipse(0, 0, 50, 50));
+        painter->drawPixmap(0, 0, pixmap);
+        painter->restore();
+    }
+};
 
 MainWindow::MainWindow(std::string uname , QWidget *parent)
     : QMainWindow(parent)
@@ -147,6 +169,26 @@ void MainWindow::on_prof_clicked()
     delete edit;
     edit = nullptr;
     refreshPage();
+}
+
+void MainWindow::setImagesInListView()
+{
+    QListView *listView = ui->listView;
+
+    listView->setViewMode(QListView::IconMode);
+    listView->setFlow(QListView::LeftToRight);
+    listView->setSpacing(10);
+    listView->setFixedHeight(70);
+
+    vector<string>* vimages = suggestUsers(uname);
+    QStringList images;
+    for(auto& i : vimages){
+        images << i;
+    }
+
+    QStringListModel *model = new QStringListModel(images);
+    listView->setModel(model);
+    listView->setItemDelegate(new CircleImageDelegate);
 }
 
 

@@ -32,7 +32,7 @@ private:
     Ui::MainWindow *ui;
     std::string uname;
     int countPosts();
-
+    void setImagesInListView();
     double calculateSimilarity(const string& user1, const string& user2);
     vector<string>* suggestUsers( string& currentUser);
     void refreshPage();

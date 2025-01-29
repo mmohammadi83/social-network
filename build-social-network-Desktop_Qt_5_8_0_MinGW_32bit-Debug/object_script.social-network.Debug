@@ -5,11 +5,10 @@ INPUT(
 ./debug\mainwindow.o
 ./debug\showmessages.o
 ./debug\users.o
-./debug\profilepage.o
 ./debug\editprofile.o
+./debug\qrc_background.o
 ./debug\moc_login.o
 ./debug\moc_mainwindow.o
 ./debug\moc_showmessages.o
-./debug\moc_profilepage.o
 ./debug\moc_editprofile.o
 );

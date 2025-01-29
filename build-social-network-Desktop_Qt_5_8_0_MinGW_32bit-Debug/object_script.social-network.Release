@@ -5,11 +5,10 @@ INPUT(
 ./release\mainwindow.o
 ./release\showmessages.o
 ./release\users.o
-./release\profilepage.o
 ./release\editprofile.o
+./release\qrc_background.o
 ./release\moc_login.o
 ./release\moc_mainwindow.o
 ./release\moc_showmessages.o
-./release\moc_profilepage.o
 ./release\moc_editprofile.o
 );

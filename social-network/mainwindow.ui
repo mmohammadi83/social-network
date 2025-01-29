@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>990</width>
-    <height>721</height>
+    <width>1075</width>
+    <height>798</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -50,7 +50,7 @@ font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>720</x>
+      <x>770</x>
       <y>110</y>
       <width>121</width>
       <height>41</height>
@@ -89,7 +89,7 @@ font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;
    <widget class="QLabel" name="following">
     <property name="geometry">
      <rect>
-      <x>860</x>
+      <x>910</x>
       <y>110</y>
       <width>91</width>
       <height>41</height>
@@ -167,14 +167,27 @@ font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;
      <string/>
     </property>
    </widget>
+   <widget class="QListView" name="listView">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>390</y>
+      <width>991</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="flow">
+     <enum>QListView::LeftToRight</enum>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>990</width>
-     <height>23</height>
+     <width>1075</width>
+     <height>31</height>
     </rect>
    </property>
   </widget>
