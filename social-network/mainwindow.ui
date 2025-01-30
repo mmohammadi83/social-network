@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1075</width>
+    <height>827</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(70, 70, 70);
+color: rgb(255, 255, 255);
+border-radius: 10px;
+font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;
+border-width: 3px;
+border-style: solid;
+border-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.769, fx:0.5, fy:0.505682, stop:0 rgba(0, 0, 0, 255), stop:0.113636 rgba(14, 8, 73, 255), stop:0.323864 rgba(28, 17, 145, 255), stop:0.539773 rgba(126, 14, 81, 255), stop:0.659091 rgba(234, 11, 11, 255), stop:0.772727 rgba(244, 70, 5, 255), stop:0.875 rgba(255, 139, 0, 255), stop:1 rgba(239, 236, 55, 255))
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="followers">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>110</y>
+      <width>91</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width: 0px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="following">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>110</y>
+      <width>91</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width: 0px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="name">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>200</y>
+      <width>481</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width: 0px;</string>
+    </property>
+    <property name="text">
+     <string>name</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="age">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>250</y>
+      <width>231</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width: 0px;</string>
+    </property>
+    <property name="text">
+     <string>age</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gmail">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>300</y>
+      <width>591</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width: 0px;</string>
+    </property>
+    <property name="text">
+     <string>gmail</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="uname">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>20</y>
+      <width>421</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width: 0px;font: 18pt &quot;Microsoft YaHei UI&quot;;</string>
+    </property>
+    <property name="text">
+     <string>uname</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="prof">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>10</y>
+      <width>181</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width: 0px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listWidget">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>430</y>
+      <width>471</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(51, 51, 51);
+font: 28pt &quot;Microsoft YaHei UI&quot;;
+border-width: 0px;</string>
+    </property>
+    <property name="movement">
+     <enum>QListView::Static</enum>
+    </property>
+    <property name="flow">
+     <enum>QListView::TopToBottom</enum>
+    </property>
+    <property name="isWrapping" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="viewMode">
+     <enum>QListView::ListMode</enum>
+    </property>
+    <property name="selectionRectVisible">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gmail_2">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>370</y>
+      <width>481</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width: 0px;</string>
+    </property>
+    <property name="text">
+     <string>suggested for you:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="logOut">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>650</y>
+      <width>181</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width: 0px;background-color: rgb(134, 134, 134);
+</string>
+    </property>
+    <property name="text">
+     <string>log out</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="followingbutton">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>110</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width: 0px;</string>
+    </property>
+    <property name="text">
+     <string>following</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="followersbutton">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>110</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width: 0px;</string>
+    </property>
+    <property name="text">
+     <string>followers</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exit">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>580</y>
+      <width>181</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width: 0px;background-color: rgb(134, 134, 134);
+</string>
+    </property>
+    <property name="text">
+     <string>exit</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1075</width>
+     <height>29</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

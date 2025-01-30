@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>editprofile</class>
+ <widget class="QDialog" name="editprofile">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>850</width>
+    <height>639</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(70, 70, 70);
+color: rgb(255, 255, 255);
+border-radius: 10px;
+font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;
+</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>80</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>name :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>30</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>username :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>130</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>age : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>180</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>gmail :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>290</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>new name :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>360</y>
+     <width>191</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>new age :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>440</y>
+     <width>191</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-width: 0px</string>
+   </property>
+   <property name="text">
+    <string>new gmail :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>520</y>
+     <width>201</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>new password :</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="linenewname">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>290</y>
+     <width>321</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="linenewage">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>370</y>
+     <width>321</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+
+border-width: 0px</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="linenewgmail">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>450</y>
+     <width>321</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="linenewpassword">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>530</y>
+     <width>321</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labeloldname">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>80</y>
+     <width>251</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>empty</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labeloldusername">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>30</y>
+     <width>251</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>empty</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labeloldage">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>130</y>
+     <width>251</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>empty</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labeloldgmail">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>180</y>
+     <width>251</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>empty</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ok">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>320</y>
+     <width>181</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(134, 134, 134);
+</string>
+   </property>
+   <property name="text">
+    <string>ok</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancel">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>420</y>
+     <width>181</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(134, 134, 134);
+</string>
+   </property>
+   <property name="text">
+    <string>cancel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="deleteAcount">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>510</y>
+     <width>181</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(134, 134, 134);
+</string>
+   </property>
+   <property name="text">
+    <string>delete acount</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="profButton">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>50</y>
+     <width>171</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
