@@ -14,6 +14,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->graph = new Graph;
+    DataBase::pushGraph(graph);
+
+
     loginfunc();
 
 
@@ -31,10 +35,6 @@ void MainWindow::loginfunc()
 {
     login log(&uname);
     log.exec();
-    this->graph = nullptr;
-    Graph* graph = new Graph;
-    DataBase::pushGraph(graph);
-    this->graph = graph;
 
 }
 
