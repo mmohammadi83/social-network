@@ -73,7 +73,7 @@ public:
 ""));
         follow = new QPushButton(profile);
         follow->setObjectName(QString::fromUtf8("follow"));
-        follow->setGeometry(QRect(350, 530, 181, 51));
+        follow->setGeometry(QRect(350, 470, 181, 51));
         follow->setStyleSheet(QString::fromUtf8("background-color: rgb(134, 134, 134);\n"
 ""));
         prof = new QPushButton(profile);

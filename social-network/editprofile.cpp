@@ -1,12 +1,13 @@
 #include "editprofile.h"
 #include "ui_editprofile.h"
 
-editprofile::editprofile(std::string uname , QWidget *parent) :
+editprofile::editprofile(Graph* graph , std::string uname , QWidget *parent) :
     QDialog(parent),
     ui(new Ui::editprofile)
 {
     ui->setupUi(this);
     this->uname = uname;
+    this->graph = graph;
     users user;
     DataBase::setUserFromDB(&user , uname);
     ui->labeloldname->setText(QString::fromStdString(user.getName()));
@@ -66,7 +67,9 @@ void editprofile::on_cancel_clicked()
 
 void editprofile::on_deleteAcount_clicked()
 {
-
+    DataBase::deleteUser(uname);
+    graph->removeNode(uname);
+    this->close();
 }
 
 void editprofile::on_profButton_clicked()

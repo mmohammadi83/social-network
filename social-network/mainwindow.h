@@ -4,7 +4,8 @@
 #include <QMainWindow>
 #include "graph.h"
 #include "database.h"
-
+#include <QListWidgetItem>
+#include "profile.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,16 +18,25 @@ class MainWindow : public QMainWindow
 public:
     Graph* graph;
 
-    MainWindow(std::string uname ,QWidget *parent = nullptr);
+    MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 
 
-    void on_pushButton_clicked();
 
 private slots:
     void on_prof_clicked();
+    void profilePicClicked(QListWidgetItem* item);
 
+
+
+    void on_followersbutton_clicked();
+
+    void on_followingbutton_clicked();
+
+    void on_logOut_clicked();
+
+    void on_exit_clicked();
 
 private:
     Ui::MainWindow *ui;
@@ -34,8 +44,11 @@ private:
     int countPosts();
     void setImagesInListView();
     double calculateSimilarity(const string& user1, const string& user2);
-    vector<string>* suggestUsers( string& currentUser);
+    vector<string> suggestUsers( string& currentUser);
     void refreshPage();
+    void setupProfilePics();
+    bool* IC;
+    void loginfunc();
 };
 
 #endif // MAINWINDOW_H

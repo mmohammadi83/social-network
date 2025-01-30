@@ -22,7 +22,12 @@ void DataBase::addUser(users &user)
     QSqlQuery query;
     query.prepare("INSERT INTO user (userName , password , name , age , gmail) "
                   "VALUES ( :Uname , :pass , :name , :age , :gmail )");
-    query.bindValue(":Uname", QString::fromStdString(user.getUName()).trimmed());
+    QString usname = QString::fromStdString(user.getUName()).trimmed();
+    if(usname == ""){
+        qDebug() << "user name is empty";
+        return;
+    }
+    query.bindValue(":Uname", usname);
     query.bindValue(":pass", QString::fromStdString(user.getPass()).trimmed());
     query.bindValue(":name", QString::fromStdString(user.getName()).trimmed());
     query.bindValue(":age", user.getage());
@@ -296,7 +301,7 @@ int DataBase::countfollowers(string uname)
     }
 
     QSqlQuery query;
-    query.prepare("SELECT COUNT(*) AS followers FROM followList WHERE userName = :uname");
+    query.prepare("SELECT COUNT(*) AS followers FROM followList WHERE following = :uname");
     query.bindValue(":uname", QString::fromStdString(uname).trimmed());
 
     if(!query.exec()){
@@ -324,7 +329,7 @@ int DataBase::countfollowing(string uname)
     }
 
     QSqlQuery query;
-    query.prepare("SELECT COUNT(*) AS followers FROM followList WHERE following = :uname");
+    query.prepare("SELECT COUNT(*) AS followers FROM followList WHERE userName = :uname");
     query.bindValue(":uname", QString::fromStdString(uname).trimmed());
 
     if(!query.exec()){
@@ -432,7 +437,7 @@ vector<string> DataBase::getAllUsers()
     }
 
     QSqlQuery query;
-    query.prepare("SELECT name FROM user ORDER BY userID DESC;");
+    query.prepare("SELECT userName FROM user ORDER BY userID DESC;");
 
     if(!query.exec()){
         qDebug() << "faild to execute";
@@ -444,6 +449,44 @@ vector<string> DataBase::getAllUsers()
     }
     db.close();
     return listUsers;
+}
+
+void DataBase::deleteUser(string uname)
+{
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("data.db");
+
+    if(!db.open()){
+        qDebug() << "faild to open database";
+        return ;
+    }
+
+    QSqlQuery query;
+    query.prepare("DELETE FROM followList WHERE userName = :uname OR following = :uname;");
+    query.bindValue(":uname", QString::fromStdString(uname).trimmed());
+    if(!query.exec()){
+        qDebug() << "faild to execute1";
+        db.close();
+        return ;
+    }
+
+    query.prepare("DELETE FROM profiles WHERE userName = :uname;");
+    query.bindValue(":uname", QString::fromStdString(uname).trimmed());
+    if(!query.exec()){
+        qDebug() << "faild to execute2";
+        db.close();
+        return ;
+    }
+
+    query.prepare("DELETE FROM user WHERE userName = :uname;");
+    query.bindValue(":uname", QString::fromStdString(uname).trimmed());
+    if(!query.exec()){
+        qDebug() << "faild to execute3";
+        db.close();
+        return ;
+    }
+    db.close();
+    qDebug() << "delete user done";
 }
 
 

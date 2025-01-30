@@ -378,6 +378,27 @@ debug/moc_mainwindow.cpp: ../social-network/mainwindow.h \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/QPixmap \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/QIcon \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QDebug \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QListWidgetItem \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qlistwidget.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qlistview.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qabstractitemview.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qframe.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/qabstractitemmodel.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/qitemselectionmodel.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qabstractitemdelegate.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qstyleoption.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qabstractspinbox.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/qvalidator.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/qregularexpression.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qslider.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qabstractslider.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qstyle.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qtabbar.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qrubberband.h \
+		../social-network/profile.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QDialog \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qdialog.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/bin/moc.exe
 	C:\Qt\Qt5.13.1\5.13.1\mingw73_64\bin\moc.exe $(DEFINES) --include "E:/daneshgah/data structure/main project/social-network-team/build-social-network-Desktop_Qt_5_13_1_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/Qt5.13.1/5.13.1/mingw73_64/mkspecs/win32-g++ -I"E:/daneshgah/data structure/main project/social-network-team/social-network" -IC:/Qt/Qt5.13.1/5.13.1/mingw73_64/include -IC:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets -IC:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui -IC:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtANGLE -IC:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtSql -IC:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore -I. -IC:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.1/Tools/mingw730_64/x86_64-w64-mingw32/include ..\social-network\mainwindow.h -o debug\moc_mainwindow.cpp
@@ -1025,7 +1046,26 @@ debug/login.o: ../social-network/login.cpp ../social-network/login.h \
 		../social-network/mainwindow.h \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QMainWindow \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qmainwindow.h \
-		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qtabwidget.h
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qtabwidget.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QListWidgetItem \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qlistwidget.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qlistview.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qabstractitemview.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qframe.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/qabstractitemmodel.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/qitemselectionmodel.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qabstractitemdelegate.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qstyleoption.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qabstractspinbox.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/qvalidator.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/qregularexpression.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qslider.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qabstractslider.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qstyle.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qtabbar.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qrubberband.h \
+		../social-network/profile.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\login.o ..\social-network\login.cpp
 
 debug/main.o: ../social-network/main.cpp C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QApplication \
@@ -1137,9 +1177,6 @@ debug/main.o: ../social-network/main.cpp C:/Qt/Qt5.13.1/5.13.1/mingw73_64/includ
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/qtouchdevice.h \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/qguiapplication.h \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/qinputmethod.h \
-		../social-network/login.h \
-		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QDialog \
-		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qdialog.h \
 		../social-network/mainwindow.h \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QMainWindow \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qmainwindow.h \
@@ -1159,7 +1196,28 @@ debug/main.o: ../social-network/main.cpp C:/Qt/Qt5.13.1/5.13.1/mingw73_64/includ
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QFile \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/QPixmap \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/QIcon \
-		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QDebug
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QDebug \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QListWidgetItem \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qlistwidget.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qlistview.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qabstractitemview.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qframe.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/qabstractitemmodel.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/qitemselectionmodel.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qabstractitemdelegate.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qstyleoption.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qabstractspinbox.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/qvalidator.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/qregularexpression.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qslider.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qabstractslider.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qstyle.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qtabbar.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qrubberband.h \
+		../social-network/profile.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QDialog \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qdialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o ..\social-network\main.cpp
 
 debug/mainwindow.o: ../social-network/mainwindow.cpp ../social-network/mainwindow.h \
@@ -1284,14 +1342,39 @@ debug/mainwindow.o: ../social-network/mainwindow.cpp ../social-network/mainwindo
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/QPixmap \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/QIcon \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QDebug \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QListWidgetItem \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qlistwidget.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qlistview.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qabstractitemview.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qframe.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/qabstractitemmodel.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/qitemselectionmodel.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qabstractitemdelegate.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qstyleoption.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qabstractspinbox.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtGui/qvalidator.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/qregularexpression.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qslider.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qabstractslider.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qstyle.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qtabbar.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qrubberband.h \
+		../social-network/profile.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QDialog \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qdialog.h \
 		ui_mainwindow.h \
 		../social-network/showmessages.h \
 		../social-network/editprofile.h \
-		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QDialog \
-		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qdialog.h \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QFileDialog \
 		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qfiledialog.h \
-		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/qdir.h
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/qdir.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QListView \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/QStringListModel \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtCore/qstringlistmodel.h \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/QStyledItemDelegate \
+		C:/Qt/Qt5.13.1/5.13.1/mingw73_64/include/QtWidgets/qstyleditemdelegate.h \
+		../social-network/login.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\social-network\mainwindow.cpp
 
 debug/profile.o: ../social-network/profile.cpp ../social-network/profile.h \

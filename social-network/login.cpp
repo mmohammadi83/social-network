@@ -28,6 +28,8 @@ login::~login()
 void login::on_loginB_clicked()
 {
     std::string uname = ui->unameLog->text().toStdString();
+    if(uname == "") return;
+
     std::string pass = ui->passLog->text().toStdString();
     int validation = DataBase::validationUser(uname , pass);
     switch (validation) {
@@ -68,6 +70,7 @@ void login::on_loginB_clicked()
 void login::on_signupB_clicked()
 {
     std::string uname = ui->userName->text().toStdString();
+    if(uname == "") return;
     std::string name = ui->name->text().toStdString();
     std::string pass = ui->password->text().toStdString();
     std::string conpass = ui->confirmPass->text().toStdString();
@@ -87,4 +90,10 @@ void login::on_signupB_clicked()
     ui->errorSignUp->hide();
     ui->doneSignUp->show();
     DataBase::addUser(u);
+    ui->name->setText("");
+    ui->userName->setText("");
+    ui->password->setText("");
+    ui->confirmPass->setText("");
+    ui->age->setText("");
+    ui->gmail->setText("");
 }

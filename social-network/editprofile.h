@@ -14,7 +14,7 @@ class editprofile : public QDialog
     Q_OBJECT
 
 public:
-    explicit editprofile(std::string uname , QWidget *parent = nullptr);
+    explicit editprofile(Graph* graph , std::string uname , QWidget *parent = nullptr);
     ~editprofile();
 
 private slots:
@@ -31,6 +31,7 @@ private slots:
 private:
     Ui::editprofile *ui;
     std::string uname;
+    Graph* graph;
 };
 
 #endif // EDITPROFILE_H

@@ -48,10 +48,19 @@ void profile::on_follow_clicked()
 {
     DataBase::follow(from , to);
     graph->addEdge(to , from);
+    ui->followers->setNum(DataBase::countfollowers(to));
+    ui->following->setNum(DataBase::countfollowing(to));
+    ui->follow->hide();
+    ui->unfollow->show();
+
 }
 
 void profile::on_unfollow_clicked()
 {
     DataBase::unfollow(from , to);
     graph->removeEdge(to , from);
+    ui->followers->setNum(DataBase::countfollowers(to));
+    ui->following->setNum(DataBase::countfollowing(to));
+    ui->follow->show();
+    ui->unfollow->hide();
 }
