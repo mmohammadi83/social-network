@@ -1,4 +1,7 @@
 release/database.o
+release/editpost.o
+release/followers.o
+release/followings.o
 release/login.o
 release/main.o
 release/mainwindow.o
@@ -7,6 +10,9 @@ release/showmessages.o
 release/users.o
 release/editprofile.o
 release/qrc_background.o
+release/moc_editpost.o
+release/moc_followers.o
+release/moc_followings.o
 release/moc_login.o
 release/moc_mainwindow.o
 release/moc_profile.o

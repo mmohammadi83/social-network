@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../social-network/profile.h"
+#include "C:/Users/mohammad/Desktop/social-network-team/social-network/profile.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)

@@ -32,6 +32,8 @@ public:
     static void unfollow(string from , string to);
     static vector<std::string> getAllUsers();
     static void deleteUser(string uname);
+    static vector<string> getFollowers(string uname);
+    static vector<string> getFollowing(string uname);
 };
 
 #endif // DATABASE_H

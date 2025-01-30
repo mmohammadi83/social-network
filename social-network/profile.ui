@@ -18,16 +18,21 @@
 color: rgb(255, 255, 255);
 border-radius: 10px;
 font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;
-</string>
+border-width: 3px;
+border-style: solid;
+border-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.769, fx:0.5, fy:0.505682, stop:0 rgba(0, 0, 0, 255), stop:0.113636 rgba(14, 8, 73, 255), stop:0.323864 rgba(28, 17, 145, 255), stop:0.539773 rgba(126, 14, 81, 255), stop:0.659091 rgba(234, 11, 11, 255), stop:0.772727 rgba(244, 70, 5, 255), stop:0.875 rgba(255, 139, 0, 255), stop:1 rgba(239, 236, 55, 255))</string>
   </property>
   <widget class="QLabel" name="followers">
    <property name="geometry">
     <rect>
-     <x>550</x>
+     <x>440</x>
      <y>110</y>
      <width>91</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-width: 0px;</string>
    </property>
    <property name="text">
     <string/>
@@ -36,11 +41,14 @@ font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>400</x>
+     <x>290</x>
      <y>110</y>
      <width>121</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-width: 0px;</string>
    </property>
    <property name="text">
     <string>followers:</string>
@@ -49,11 +57,14 @@ font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;
   <widget class="QLabel" name="following">
    <property name="geometry">
     <rect>
-     <x>790</x>
+     <x>750</x>
      <y>110</y>
      <width>91</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-width: 0px;</string>
    </property>
    <property name="text">
     <string/>
@@ -62,11 +73,14 @@ font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>650</x>
+     <x>610</x>
      <y>110</y>
      <width>121</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-width: 0px;</string>
    </property>
    <property name="text">
     <string>following:</string>
@@ -76,10 +90,14 @@ font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;
    <property name="geometry">
     <rect>
      <x>290</x>
-     <y>40</y>
+     <y>30</y>
      <width>421</width>
-     <height>41</height>
+     <height>61</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-width: 0px;
+font: 28 16pt &quot;Microsoft YaHei UI Light&quot;;</string>
    </property>
    <property name="text">
     <string>uname</string>
@@ -94,6 +112,9 @@ font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;
      <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-width: 0px;</string>
+   </property>
    <property name="text">
     <string>gmail</string>
    </property>
@@ -107,6 +128,9 @@ font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;
      <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-width: 0px;</string>
+   </property>
    <property name="text">
     <string>name</string>
    </property>
@@ -119,6 +143,9 @@ font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;
      <width>231</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-width: 0px;</string>
    </property>
    <property name="text">
     <string>age</string>
@@ -134,7 +161,7 @@ font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(134, 134, 134);
+    <string notr="true">border-width: 0px;background-color: rgb(134, 134, 134);
 </string>
    </property>
    <property name="text">
@@ -151,7 +178,7 @@ font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(134, 134, 134);
+    <string notr="true">border-width: 0px;background-color: rgb(134, 134, 134);
 </string>
    </property>
    <property name="text">
@@ -166,6 +193,9 @@ font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;
      <width>161</width>
      <height>151</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-width: 0px;</string>
    </property>
    <property name="text">
     <string/>

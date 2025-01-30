@@ -62,9 +62,6 @@ public:
 "font: 10pt \"Mongolian Baiti\";\n"
 "color:rgb(255,255,255);\n"
 "border-radius: 10px;\n"
-"\n"
-"\n"
-"\n"
 ""));
         label = new QLabel(login);
         label->setObjectName(QString::fromUtf8("label"));

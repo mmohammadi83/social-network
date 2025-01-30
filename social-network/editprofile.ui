@@ -17,7 +17,8 @@
    <string notr="true">background-color: rgb(70, 70, 70);
 color: rgb(255, 255, 255);
 border-radius: 10px;
-font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;</string>
+font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;
+</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -106,6 +107,9 @@ font: 25 12pt &quot;Microsoft JhengHei UI Light&quot;;</string>
      <height>51</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-width: 0px</string>
+   </property>
    <property name="text">
     <string>new gmail :</string>
    </property>
@@ -148,7 +152,9 @@ color: rgb(0, 0, 0);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+
+border-width: 0px</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="linenewgmail">

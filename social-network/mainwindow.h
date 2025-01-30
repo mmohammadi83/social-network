@@ -6,6 +6,15 @@
 #include "database.h"
 #include <QListWidgetItem>
 #include "profile.h"
+#include "editprofile.h"
+#include <set>
+#include <QListView>
+#include <QStringListModel>
+#include <QStyledItemDelegate>
+#include "login.h"
+#include <QHBoxLayout>
+#include "followers.h"
+#include "followings.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,7 +29,6 @@ public:
 
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
 
 
 
@@ -41,13 +49,11 @@ private slots:
 private:
     Ui::MainWindow *ui;
     std::string uname;
-    int countPosts();
-    void setImagesInListView();
     double calculateSimilarity(const string& user1, const string& user2);
     vector<string> suggestUsers( string& currentUser);
-    void refreshPage();
     void setupProfilePics();
-    bool* IC;
+    void refreshPage();
+
     void loginfunc();
 };
 

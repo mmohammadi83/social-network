@@ -50,7 +50,8 @@ public:
         editprofile->setStyleSheet(QString::fromUtf8("background-color: rgb(70, 70, 70);\n"
 "color: rgb(255, 255, 255);\n"
 "border-radius: 10px;\n"
-"font: 25 12pt \"Microsoft JhengHei UI Light\";"));
+"font: 25 12pt \"Microsoft JhengHei UI Light\";\n"
+""));
         label = new QLabel(editprofile);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(330, 80, 171, 41));
@@ -72,6 +73,7 @@ public:
         label_9 = new QLabel(editprofile);
         label_9->setObjectName(QString::fromUtf8("label_9"));
         label_9->setGeometry(QRect(40, 440, 191, 51));
+        label_9->setStyleSheet(QString::fromUtf8("border-width: 0px"));
         label_10 = new QLabel(editprofile);
         label_10->setObjectName(QString::fromUtf8("label_10"));
         label_10->setGeometry(QRect(40, 520, 201, 51));
@@ -84,7 +86,9 @@ public:
         linenewage->setObjectName(QString::fromUtf8("linenewage"));
         linenewage->setGeometry(QRect(240, 370, 321, 41));
         linenewage->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
-"color: rgb(0, 0, 0);"));
+"color: rgb(0, 0, 0);\n"
+"\n"
+"border-width: 0px"));
         linenewgmail = new QLineEdit(editprofile);
         linenewgmail->setObjectName(QString::fromUtf8("linenewgmail"));
         linenewgmail->setGeometry(QRect(240, 450, 321, 41));

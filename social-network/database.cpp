@@ -301,7 +301,7 @@ int DataBase::countfollowers(string uname)
     }
 
     QSqlQuery query;
-    query.prepare("SELECT COUNT(*) AS followers FROM followList WHERE following = :uname");
+    query.prepare("SELECT COUNT(*) AS following FROM followList WHERE following = :uname");
     query.bindValue(":uname", QString::fromStdString(uname).trimmed());
 
     if(!query.exec()){
@@ -329,7 +329,7 @@ int DataBase::countfollowing(string uname)
     }
 
     QSqlQuery query;
-    query.prepare("SELECT COUNT(*) AS followers FROM followList WHERE userName = :uname");
+    query.prepare("SELECT COUNT(*) AS userName FROM followList WHERE userName = :uname");
     query.bindValue(":uname", QString::fromStdString(uname).trimmed());
 
     if(!query.exec()){
@@ -490,7 +490,58 @@ void DataBase::deleteUser(string uname)
 }
 
 
+vector<string> DataBase::getFollowers(string uname){
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("data.db");
 
+    if(!db.open()){
+        qDebug() << "faild to open database";
+
+    }
+
+    QSqlQuery query;
+    query.prepare("SELECT userName FROM followList WHERE following = :uname ");
+    query.bindValue(":uname", QString::fromStdString(uname).trimmed());
+
+    if(!query.exec()){
+        qDebug() << "faild to execute getfollowers";
+        db.close();
+
+    }
+    vector<string> followers;
+    while(query.next()){
+        followers.push_back(query.value(0).toString().toStdString());
+    }
+    db.close();
+    return followers;
+}
+
+vector<string> DataBase::getFollowing(string uname)
+{
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("data.db");
+
+    if(!db.open()){
+        qDebug() << "faild to open database";
+
+    }
+
+    QSqlQuery query;
+    query.prepare("SELECT following FROM followList WHERE userName = :uname ");
+    query.bindValue(":uname", QString::fromStdString(uname).trimmed());
+
+    if(!query.exec()){
+        qDebug() << "faild to execute getfollowers";
+        db.close();
+
+    }
+    vector<string> following;
+    while(query.next()){
+        following.push_back(query.value(0).toString().toStdString());
+    }
+    db.close();
+    return following;
+}
 
 
 

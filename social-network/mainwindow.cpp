@@ -1,12 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "showmessages.h"
-#include "editprofile.h"
-#include <set>
-#include <QListView>
-#include <QStringListModel>
-#include <QStyledItemDelegate>
-#include "login.h"
+
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -35,7 +30,6 @@ void MainWindow::loginfunc()
 {
     login log(&uname);
     log.exec();
-
 }
 
 
@@ -159,50 +153,69 @@ void MainWindow::setupProfilePics()
         qDebug() << "ListWidget is null!";
         return;
     }
+
+    disconnect(listWidget, &QListWidget::itemClicked, this, &MainWindow::profilePicClicked);
+    listWidget->clear();
+
     vector<string> vusers = suggestUsers(uname);
     std::vector<QString> imagePaths;
     for (auto& i : vusers) {
-        QString qstr = QString::fromStdString(i);
-        listWidget->addItem(qstr);
-        //QString path = DataBase::setProfile(i);
-        //if (!QFile::exists(path)) {
-           // qDebug() << "Image path does not exist:" << path;
-            //continue;
-       // }
-        //imagePaths.push_back(path);
-//    }
-//    int maxItems = 6; // حداکثر تعداد آیتم‌های نمایش داده شده
-//    int itemsToShow = std::min(maxItems, static_cast<int>(imagePaths.size()));
+        //QString qstr = QString::fromStdString(i);
+        //listWidget->addItem(qstr);
+        QString path = DataBase::setProfile(i);
+        if (!QFile::exists(path)) {
+            qDebug() << "Image path does not exist:" << path;
+            continue;
+        }
+        imagePaths.push_back(path);
+    }
+    int maxItems = 6;
+    int itemsToShow = std::min(maxItems, static_cast<int>(imagePaths.size()));
 
-//    for (int i = 0; i < itemsToShow; ++i)
-//    {
-//        const QString& path = imagePaths[i];
-//        QPixmap pixmap(path);
-//        if (pixmap.isNull()) {
-//            qDebug() << "Failed to load image from path:" << path;
-//            continue;
-//        }
-//        pixmap.scaled(QSize(50, 50), Qt::KeepAspectRatio, Qt::SmoothTransformation);
-//        QPixmap roundedPixmap(QSize(50, 50)); // اندازه تصویر گرد شده
-//        roundedPixmap.fill(Qt::transparent);
+    for (int i = 0; i < itemsToShow; ++i)
+    {
+        const QString& path = imagePaths[i];
+        QPixmap pixmap(path);
+        if (pixmap.isNull()) {
+            qDebug() << "Failed to load image from path:" << path;
+            continue;
+        }
+        pixmap.scaled(QSize(80, 80), Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation);
+        QPixmap roundedPixmap(QSize(80, 80));
+        roundedPixmap.fill(Qt::transparent);
 
-//        QPainter painter(&roundedPixmap);
-//        painter.setRenderHint(QPainter::Antialiasing);
-//        QPainterPath path2;
-//        path2.addEllipse(roundedPixmap.rect());
-//        painter.setClipPath(path2);
-//        painter.drawPixmap(0, 0, pixmap.scaled(QSize(50, 50), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-//        painter.end();
+        QPainter painter(&roundedPixmap);
+        painter.setRenderHint(QPainter::Antialiasing);
+        QPainterPath path2;
+        path2.addEllipse(roundedPixmap.rect());
+        painter.setClipPath(path2);
+        painter.drawPixmap(0, 0, pixmap.scaled(QSize(80, 80), Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation));
+        painter.end();
 
-//        QLabel* label = new QLabel;
-//        label->setPixmap(roundedPixmap);
-//        label->setFixedSize(50, 50); // اندازه‌ی ثابت برای لیبل
+        QWidget* customWidget = new QWidget;
+        QHBoxLayout* layout = new QHBoxLayout(customWidget);
+        layout->setContentsMargins(0, 0, 0, 0);
 
-//        QListWidgetItem* item = new QListWidgetItem;
-//        listWidget->addItem(item);
-//        listWidget->setItemWidget(item, label);
+        QLabel* labelImage = new QLabel;
+        labelImage->setPixmap(roundedPixmap);
+        labelImage->setFixedSize(80, 80);
 
+        QLabel* labelUsername = new QLabel;
+        labelUsername->setText(QString::fromStdString(vusers[i]));
+        labelUsername->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
 
+        QFont font = labelUsername->font();
+        font.setPointSize(10);
+        labelUsername->setFont(font);
+
+        layout->addWidget(labelImage);
+        layout->addWidget(labelUsername);
+
+        QListWidgetItem* item = new QListWidgetItem;
+        listWidget->addItem(item);
+        listWidget->setItemWidget(item, customWidget);
+
+        item->setData(Qt::UserRole, QVariant::fromValue(QString::fromStdString(vusers[i])));
     }
 
     connect(listWidget, &QListWidget::itemClicked, this, &MainWindow::profilePicClicked);
@@ -212,16 +225,24 @@ void MainWindow::setupProfilePics()
 
 void MainWindow::profilePicClicked(QListWidgetItem* item)
 {
+    if (!item)
+    {
+        qDebug() << "Item is null!";
+        return;
+    }
 
-    qDebug() << "Profile picture clicked!" << item->text();
-    profile* pro = new profile(graph , uname ,item->text().toStdString());
-    pro->exec();
-    delete pro;
-    pro = nullptr;
-    //ui->listWidget->clear();
-    ui->followers->setNum(DataBase::countfollowers(uname));
-    ui->following->setNum(DataBase::countfollowing(uname));
-
+    QVariant userData = item->data(Qt::UserRole);
+    if (userData.isValid()) {
+        QString unameTo = userData.toString();
+        profile* prof = new profile(graph, uname, unameTo.toStdString());
+        prof->exec();
+        delete prof;
+        prof = nullptr;
+        ui->followers->setNum(DataBase::countfollowers(uname));
+        ui->following->setNum(DataBase::countfollowing(uname));
+    } else {
+        qDebug() << "User data is invalid!";
+    }
 }
 
 void MainWindow::on_prof_clicked()
@@ -242,12 +263,22 @@ void MainWindow::on_prof_clicked()
 
 void MainWindow::on_followersbutton_clicked()
 {
-
+    followers* f = new followers(graph , uname);
+    f->exec();
+    delete f;
+    f = nullptr;
+    ui->followers->setNum(DataBase::countfollowers(uname));
+    ui->following->setNum(DataBase::countfollowing(uname));
 }
 
 void MainWindow::on_followingbutton_clicked()
 {
-
+    followings* f = new followings(graph , uname);
+    f->exec();
+    delete f;
+    f = nullptr;
+    ui->followers->setNum(DataBase::countfollowers(uname));
+    ui->following->setNum(DataBase::countfollowing(uname));
 }
 
 void MainWindow::on_logOut_clicked()
