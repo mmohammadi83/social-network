@@ -26,6 +26,7 @@ private:
     string from;
     string to;
     Graph* graph;
+    void showPosts();
 };
 
 #endif // PROFILE_H

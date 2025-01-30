@@ -543,6 +543,81 @@ vector<string> DataBase::getFollowing(string uname)
     return following;
 }
 
+void DataBase::addPost(string uname, QString post)
+{
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("data.db");
+
+    if(!db.open()){
+        qDebug() << "faild to open database";
+
+    }
+
+    QSqlQuery query;
+    query.prepare("INSERT INTO posts VALUES(:uname , :post");
+    query.bindValue(":uname", QString::fromStdString(uname).trimmed());
+    query.bindValue(":post", post);
+
+    if(!query.exec()){
+        qDebug() << "faild to execute addPost";
+        db.close();
+    }
+    db.close();
+}
+
+int DataBase::countPost(string uname)
+{
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("data.db");
+
+    if(!db.open()){
+        qDebug() << "faild to open database";
+
+    }
+
+    QSqlQuery query;
+    query.prepare("SELECT COUNT(*) AS uname FROM posts WHERE userName = :uname");
+    query.bindValue(":uname", QString::fromStdString(uname).trimmed());
+
+    if(!query.exec()){
+        qDebug() << "faild to execute countPost";
+        db.close();
+    }
+    query.next();
+    int a = query.value(0).toInt();
+    db.close();
+    return a;
+}
+
+vector<QString> DataBase::getPost(string uname)
+{
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("data.db");
+    vector<QString> posts;
+
+    if(!db.open()){
+        qDebug() << "faild to open database";
+
+    }
+
+    QSqlQuery query;
+    query.prepare("SELECT post FROM posts WHERE userName = :uname");
+    query.bindValue(":uname", QString::fromStdString(uname).trimmed());
+
+    if(!query.exec()){
+        qDebug() << "faild to execute getPost";
+        db.close();
+    }
+
+    while(query.next()){
+        posts.push_back(query.value(0).toString());
+    }
+
+    db.close();
+    return posts;
+
+}
+
 
 
 

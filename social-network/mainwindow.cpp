@@ -297,3 +297,11 @@ void MainWindow::on_exit_clicked()
 {
     this->close();
 }
+
+void MainWindow::on_postButton_clicked()
+{
+    editPost* post = new editPost(uname);
+    post->exec();
+    delete post;
+    post = nullptr;
+}

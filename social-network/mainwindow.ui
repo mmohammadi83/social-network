@@ -248,6 +248,23 @@ border-width: 0px;</string>
      <string>exit</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="postButton">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>510</y>
+      <width>181</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width: 0px;background-color: rgb(134, 134, 134);
+</string>
+    </property>
+    <property name="text">
+     <string>posts</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

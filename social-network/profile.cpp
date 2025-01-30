@@ -37,6 +37,12 @@ profile::profile(Graph* graph , std::string from , std::string to , QWidget *par
 
     ui->prof->setIcon(buttonIcon);
     ui->prof->setIconSize(ui->prof->size());
+    if(DataBase::isFollowing(from , to)){
+        showPosts();
+    }
+    else{
+        ui->posts->hide();
+    }
 }
 
 profile::~profile()
@@ -64,3 +70,13 @@ void profile::on_unfollow_clicked()
     ui->follow->show();
     ui->unfollow->hide();
 }
+
+void profile::showPosts()
+{
+    vector<QString> posts = DataBase::getPost(to);
+    for(auto& i: posts){
+        ui->posts->addItem(i);
+    }
+}
+
+
