@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 static const unsigned char qt_resource_data[] = {
-  // C:/Users/mohammad/Desktop/social-network-team/social-network/defualt.jpg
+  // E:/daneshgah/data structure/main project/social-network-team/social-network/defualt.jpg
   0x0,0x0,0x46,0xda,
   0xff,
   0xd8,0xff,0xe0,0x0,0x10,0x4a,0x46,0x49,0x46,0x0,0x1,0x1,0x1,0x0,0x48,0x0,

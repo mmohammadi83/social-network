@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "C:/Users/mohammad/Desktop/social-network-team/social-network/login.h"
+#include "../../social-network/login.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)

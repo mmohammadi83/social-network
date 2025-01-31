@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     database.cpp \
+    editpost.cpp \
     followers.cpp \
     followings.cpp \
     login.cpp \
@@ -29,6 +30,7 @@ SOURCES += \
 
 HEADERS += \
     database.h \
+    editpost.h \
     followers.h \
     followings.h \
     login.h \
@@ -41,6 +43,7 @@ HEADERS += \
     editprofile.h
 
 FORMS += \
+    editpost.ui \
     followers.ui \
     followings.ui \
     login.ui \

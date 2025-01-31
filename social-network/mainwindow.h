@@ -15,6 +15,7 @@
 #include <QHBoxLayout>
 #include "followers.h"
 #include "followings.h"
+#include "editpost.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -45,6 +46,8 @@ private slots:
     void on_logOut_clicked();
 
     void on_exit_clicked();
+
+    void on_postButton_clicked();
 
 private:
     Ui::MainWindow *ui;

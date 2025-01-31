@@ -34,6 +34,9 @@ public:
     static void deleteUser(string uname);
     static vector<string> getFollowers(string uname);
     static vector<string> getFollowing(string uname);
+    static void addPost(string uname , QString post);
+    static int countPost(string uname);
+    static vector<QString> getPost(string uname);
 };
 
 #endif // DATABASE_H

@@ -38,7 +38,6 @@ public:
     QPushButton *followingbutton;
     QPushButton *followersbutton;
     QPushButton *exit;
-    QPushButton *postButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -118,11 +117,6 @@ public:
         exit->setGeometry(QRect(820, 580, 181, 51));
         exit->setStyleSheet(QString::fromUtf8("border-width: 0px;background-color: rgb(134, 134, 134);\n"
 ""));
-        postButton = new QPushButton(centralwidget);
-        postButton->setObjectName(QString::fromUtf8("postButton"));
-        postButton->setGeometry(QRect(820, 510, 181, 51));
-        postButton->setStyleSheet(QString::fromUtf8("border-width: 0px;background-color: rgb(134, 134, 134);\n"
-""));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -152,7 +146,6 @@ public:
         followingbutton->setText(QCoreApplication::translate("MainWindow", "following", nullptr));
         followersbutton->setText(QCoreApplication::translate("MainWindow", "followers", nullptr));
         exit->setText(QCoreApplication::translate("MainWindow", "exit", nullptr));
-        postButton->setText(QCoreApplication::translate("MainWindow", "posts", nullptr));
     } // retranslateUi
 
 };
